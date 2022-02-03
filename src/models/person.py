@@ -14,7 +14,7 @@ def orjson_dumps(v, *, default):
 
 
 class Genre(BaseModel):
-    id: UUID
+    id: str
     full_name: str
     birth_date: datetime.datetime
 
