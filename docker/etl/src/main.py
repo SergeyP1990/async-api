@@ -1,27 +1,3 @@
-# Помимо этого мне хочется переделать классы сборщиков следующим образом:
-# - Передавать аргументы для работы сборщиков в виде словарей, чтобы не городить монструозные
-#   конструкции при инициализации этих классов;
-# - Убрать передачу экземпляров сборщиков при инициализации. Т.к. классы наследуются,
-#   то можно использовать родительские методы и родительские параметры.
-#
-#   В итоге интерфейс должен получится примерно такой:
-# producer_settings_dict = {
-#     "sql_query": "query",
-#     "sql_params": {"name": "value"},
-#     ....
-# }
-# enricher_settings_dict = {
-#     "sql_query": "query",
-#     "sql_params": {"name": "value"},
-#    ....
-# }
-# И далее объявление, например, сборщика 2го уровня:
-# enricher = Enricher(producer_settings = producer_settings_dict, enricher_settings = enricher_settings_dict)
-#
-# Как вы оцениваете данную идею?
-# Спасибо!
-#
-
 # Без этого подключения почему-то не работает аннотация
 # именем класса в методах, возвращающих self. В данном случае:
 # def __enter__ в PostgresConnection
@@ -51,7 +27,7 @@ from state_control import State, JsonFileStorage
 # Считывание конфига происходит здесь, т.к.
 # иначе не передать параметры в декоратор @backoff:
 # conf должна быть глобальной для этого
-conf = Config.parse_config("./config")
+conf = Config.parse_config("../config")
 
 
 class PostgresConnection:
