@@ -1,0 +1,19 @@
+[pg_database]
+dbname="mv_db_test"
+host="127.0.0.1"
+port=5433
+# no user or password here, use .env
+
+[sql_settings]
+limit=5000
+
+[elastic]
+host="127.0.0.1"
+port=9200
+
+[backoff]
+max_time=60
+
+[etl]
+# time interval in sec
+time_interval=300
