@@ -10,6 +10,6 @@ RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
 COPY . .
-COPY .env src/.env
+WORKDIR /opt/src
 
-CMD ["python3", "src/main.py"]
+CMD ["python3", "main.py"]

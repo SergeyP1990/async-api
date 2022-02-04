@@ -19,10 +19,10 @@ from elasticsearch import exceptions as elastic_exceptions
 from psycopg2.extras import DictCursor
 from psycopg2.sql import SQL
 
-import sql_queries
-from config import Config
-from data_representation import FilmWork, BaseRecord, FilmWorkPersons, FilmWorkGenres, Person, Genre
-from state_control import State, JsonFileStorage
+from modules import sql_queries
+from modules.config import Config
+from modules.data_representation import FilmWork, BaseRecord, FilmWorkPersons, FilmWorkGenres, Person, Genre
+from modules.state_control import State, JsonFileStorage
 
 # Считывание конфига происходит здесь, т.к.
 # иначе не передать параметры в декоратор @backoff:
@@ -515,7 +515,6 @@ def genres(
     logging.info("Выгрузка full_genres завершена")
 
 
-
 if __name__ == "__main__":
     logging.basicConfig(level="INFO")
     logging.info("Начало работы")
@@ -526,10 +525,13 @@ if __name__ == "__main__":
         pg_dsl["password"] = os.environ.get("DB_PASSWD")
         pg_dsl["user"] = os.environ.get("DB_USER")
 
+        elastic_host = os.environ.get("ELASTIC_HOST")
+        elastic_port = int(os.environ.get("ELASTIC_PORT"))
+
         with PostgresConnection(pg_dsl) as pg_conn:
             # with PostgresConnection(conf.pg_database.dict()) as pg_conn:
             # Предполагается, что на момент старта скрипта необходимые index'ы уже созданы
-            esr = ElasticRequester([conf.elastic.host], port=conf.elastic.port)
+            esr = ElasticRequester([elastic_host], port=elastic_port)
 
             # Считывание state файла. При инициализации класса State
             # отсутствующие необходимые параметры будут заполнены
