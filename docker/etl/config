@@ -1,6 +1,6 @@
 [pg_database]
-dbname="mv_db_test"
-host="127.0.0.1"
+dbname="movies_database"
+host="db"
 port=5432
 # no user or password here, use .env
 
@@ -8,7 +8,7 @@ port=5432
 limit=500
 
 [elastic]
-host="127.0.0.1"
+host="es"
 port=9200
 
 [backoff]

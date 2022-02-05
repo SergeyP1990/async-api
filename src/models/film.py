@@ -12,12 +12,12 @@ def orjson_dumps(v, *, default):
 
 
 class Film(BaseModel):
-    id: str
+    uuid: str
     title: str
     description: Optional[str]
-    rating: float
+    imdb_rating: float
 
-    genres: Optional[List[dict]]
+    genre: Optional[List[dict]]
     actors: Optional[List[dict]]
     writers: Optional[List[dict]]
     directors: Optional[List[dict]]

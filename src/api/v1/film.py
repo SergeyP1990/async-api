@@ -11,14 +11,14 @@ router = APIRouter()
 
 
 class Film(BaseModel):
-    id: UUID
+    uuid: UUID
     title: str
     imdb_rating: float
 
 
 class FilmDetail(Film):
-    description: str
-    genres: List[dict]
+    description: Optional[str]
+    genre: List[dict]
     actors: List[dict]
     writers: List[dict]
     directors: List[dict]
@@ -42,20 +42,20 @@ async def film_details(film_id: str,
         # Если бы использовалась общая модель для бизнес-логики и формирования ответов API
         # вы бы предоставляли клиентам данные, которые им не нужны
         # и, возможно, данные, которые опасно возвращать
-    return FilmDetail(id=film.id, title=film.title, imdb_rating=film.rating, description=film.description,
-                      genres=film.genres, actors=film.actors, writers=film.writers, directors=film.directors)
+    return FilmDetail(uuid=film.uuid, title=film.title, imdb_rating=film.imdb_rating, description=film.description,
+                      genre=film.genre, actors=film.actors, writers=film.writers, directors=film.directors)
 
 
 @router.get('/')
 async def film_main(
-        sort: str = "-rating",
+        sort: str = "-imdb_rating",
         page_size: int = Query(50, alias="page[size]"),
         page_number: int = Query(1, alias="page[number]"),
         filter_genre: str = Query(None, alias="filter[genre]"),
         film_service: FilmService = Depends(get_film_service)
         ) -> List[Film]:
     data = await film_service.get_film_pagination(sort, page_size, page_number, filter_genre)
-    films = [Film(id=film.id, title=film.title, imdb_rating=film.rating) for film in data]
+    films = [Film(uuid=film.uuid, title=film.title, imdb_rating=film.imdb_rating) for film in data]
     return films
 
 
@@ -67,5 +67,5 @@ async def film_search(
         film_service: FilmService = Depends(get_film_service)
         ) -> List[Film]:
     data = await film_service.get_film_search(query, page_size, page_number)
-    films = [Film(id=film.id, title=film.title, imdb_rating=film.rating) for film in data]
+    films = [Film(uuid=film.uuid, title=film.title, imdb_rating=film.imdb_rating) for film in data]
     return films
