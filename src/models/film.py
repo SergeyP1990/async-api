@@ -11,27 +11,16 @@ def orjson_dumps(v, *, default):
     return orjson.dumps(v, default=default).decode()
 
 
-class Person(BaseModel):
-    id: UUID
-    name: str
-
-
-class Genre(BaseModel):
-    id: UUID
-    name: str
-
-
 class Film(BaseModel):
-    id: UUID
+    id: str
     title: str
-    description: str
+    description: Optional[str]
     rating: float
-    type: str
 
-    genres: Optional[List[Genre]]
-    actors: Optional[List[Person]]
-    writers: Optional[List[Person]]
-    directors: Optional[List[Person]]
+    genres: Optional[List[dict]]
+    actors: Optional[List[dict]]
+    writers: Optional[List[dict]]
+    directors: Optional[List[dict]]
 
     class Config:
         # Заменяем стандартную работу с json на более быструю
