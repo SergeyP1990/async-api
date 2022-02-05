@@ -59,11 +59,11 @@ class FilmService:
                 'bool': {
                     'filter': {
                         'nested': {
-                            'path': 'genres',
+                            'path': 'genre',
                             'query': {
                                 'bool': {
-                                    'filter': {
-                                        'term': {'genres.id': filter_genre}
+                                    'must': {
+                                        'match': {'genre.name': filter_genre}
                                     }
                                 }
                             }

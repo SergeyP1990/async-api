@@ -13,15 +13,15 @@ router = APIRouter()
 class Film(BaseModel):
     uuid: UUID
     title: str
-    imdb_rating: float
+    imdb_rating: float = None
 
 
 class FilmDetail(Film):
-    description: Optional[str]
-    genre: List[dict]
-    actors: List[dict]
-    writers: List[dict]
-    directors: List[dict]
+    description: str = None
+    genre: List[dict] = None
+    actors: List[dict] = None
+    writers: List[dict] = None
+    directors: List[dict] = None
 
 
 # Внедряем FilmService с помощью Depends(get_film_service)

@@ -14,13 +14,13 @@ def orjson_dumps(v, *, default):
 class Film(BaseModel):
     uuid: str
     title: str
-    description: Optional[str]
-    imdb_rating: float
+    description: str = None
+    imdb_rating: float = None
 
-    genre: Optional[List[dict]]
-    actors: Optional[List[dict]]
-    writers: Optional[List[dict]]
-    directors: Optional[List[dict]]
+    genre: Optional[List[dict]] = None
+    actors: Optional[List[dict]] = None
+    writers: Optional[List[dict]] = None
+    directors: Optional[List[dict]] = None
 
     class Config:
         # Заменяем стандартную работу с json на более быструю
