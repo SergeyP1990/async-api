@@ -14,9 +14,8 @@ def orjson_dumps(v, *, default):
 
 
 class Genre(BaseModel):
-    id: str
+    uuid: str
     name: str
-    description: str
 
     class Config:
         # Заменяем стандартную работу с json на более быструю
