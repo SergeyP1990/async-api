@@ -23,7 +23,7 @@ from modules import sql_queries
 from modules.config import Config
 from modules.data_representation import FilmWork, BaseRecord, FilmWorkPersons, FilmWorkGenres, Person, Genre
 from modules.state_control import State, JsonFileStorage
-
+import modules.index_schem as index_schemes
 # Считывание конфига происходит здесь, т.к.
 # иначе не передать параметры в декоратор @backoff:
 # conf должна быть глобальной для этого
@@ -334,6 +334,17 @@ class ElasticRequester:
         res = helpers.bulk(self.elastic_instance, self.bulk_request, index=to_index)
         return res
 
+    def check_index_exists(self, index_name: str):
+        if self.elastic_instance.indices.exists(index=index_name):
+            return True
+        else:
+            return False
+
+    def handle_index(self, index_name: str, index_struct: dict, force=False):
+        if not self.check_index_exists(index_name) or force:
+            self.elastic_instance.indices.create(index=index_name, body=index_struct)
+
+
 
 def fw_producer(
     pg_connection: PostgresConnection,
@@ -475,9 +486,9 @@ def persons(
         elastic_requester.prepare_bulk(
             film_work_objects, "update", "id", upsert=True
         )
-        res = elastic_requester.make_bulk_request(to_index="person")
+        res = elastic_requester.make_bulk_request(to_index="persons")
         # запись в state_file последнего успешно записанного значения updated_at
-        state.set_state("film_work_upd_at", full_persons_producer.last_upd_at)
+        state.set_state("persons_full_upd_at", full_persons_producer.last_upd_at)
 
     logging.info("Выгрузка full_persons завершена")
 
@@ -508,9 +519,9 @@ def genres(
         elastic_requester.prepare_bulk(
             film_work_objects, "update", "id", upsert=True
         )
-        res = elastic_requester.make_bulk_request(to_index="genre")
+        res = elastic_requester.make_bulk_request(to_index="genres")
         # запись в state_file последнего успешно записанного значения updated_at
-        state.set_state("film_work_upd_at", full_genres_producer.last_upd_at)
+        state.set_state("genres_full_upd_at", full_genres_producer.last_upd_at)
 
     logging.info("Выгрузка full_genres завершена")
 
@@ -522,16 +533,19 @@ if __name__ == "__main__":
     while True:
         load_dotenv()
         pg_dsl = conf.pg_database.dict()
-        pg_dsl["password"] = os.environ.get("DB_PASSWD")
-        pg_dsl["user"] = os.environ.get("DB_USER")
+        pg_dsl["password"] = os.environ.get("ETL_DB_USER")
+        pg_dsl["user"] = os.environ.get("ETL_DB_USER")
 
-        elastic_host = os.environ.get("ELASTIC_HOST")
-        elastic_port = int(os.environ.get("ELASTIC_PORT"))
+        elastic_host = os.environ.get("ETL_ES_HOST")
+        elastic_port = int(os.environ.get("ETL_ES_PORT"))
 
         with PostgresConnection(pg_dsl) as pg_conn:
             # with PostgresConnection(conf.pg_database.dict()) as pg_conn:
             # Предполагается, что на момент старта скрипта необходимые index'ы уже созданы
             esr = ElasticRequester([elastic_host], port=elastic_port)
+            esr.handle_index("movies", index_schemes.movies_index())
+            esr.handle_index("persons", index_schemes.persons_index())
+            esr.handle_index("genres", index_schemes.genres_index())
 
             # Считывание state файла. При инициализации класса State
             # отсутствующие необходимые параметры будут заполнены

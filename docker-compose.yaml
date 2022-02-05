@@ -58,6 +58,16 @@ services:
     networks:
       - test_net
 
+  etl:
+    build: ./docker/etl
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - es
+    networks:
+      - test_net
+
 networks:
     test_net:
         driver: bridge

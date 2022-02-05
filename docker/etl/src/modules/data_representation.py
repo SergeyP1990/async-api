@@ -13,7 +13,7 @@ class BaseRecord:
 @dataclass
 class FilmWorkGenres:
     fw_id: uuid.UUID = field(default=None)
-    genres: List = field(default_factory=list)
+    genre: List = field(default_factory=list)
 
     def elastic_format(self) -> dict:
         di = {}
@@ -30,9 +30,7 @@ class FilmWorkGenres:
 @dataclass
 class FilmWorkPersons:
     fw_id: uuid.UUID = field(default=None)
-    director: List = field(default_factory=list)
-    actors_names: List = field(default_factory=list)
-    writers_names: List = field(default_factory=list)
+    directors: List = field(default_factory=list)
     actors: List = field(default_factory=list)
     writers: List = field(default_factory=list)
 
@@ -52,10 +50,7 @@ class FilmWork:
     imdb_rating: float = field(default=None)
     title: str = field(default=None)
     description: str = field(default=None)
-    genres: List = field(default_factory=list)
-    director: List = field(default_factory=list)
-    actors_names: List = field(default_factory=list)
-    writers_names: List = field(default_factory=list)
+    genre: List = field(default_factory=list)
     actors: List = field(default_factory=list)
     writers: List = field(default_factory=list)
     directors: List = field(default_factory=list)
@@ -68,7 +63,7 @@ class FilmWork:
             if f_name == "genres":
                 f_name = "genre"
             if f_name == "fw_id":
-                f_name = "id"
+                f_name = "uuid"
             if f_name == "updated_at":
                 continue
             di[f_name] = getattr(self, model_field.name)
@@ -87,6 +82,8 @@ class Person:
         di = {}
         for model_field in fields(self):
             f_name = model_field.name
+            if f_name == "id":
+                f_name = "uuid"
             if f_name == "updated_at":
                 continue
             di[f_name] = getattr(self, model_field.name)
@@ -102,6 +99,8 @@ class Genre:
         di = {}
         for model_field in fields(self):
             f_name = model_field.name
+            if f_name == "id":
+                f_name = "uuid"
             if f_name == "updated_at":
                 continue
             di[f_name] = getattr(self, model_field.name)
