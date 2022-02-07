@@ -13,7 +13,7 @@ def orjson_dumps(v, *, default):
 
 
 class Person(BaseModel):
-    uuid: UUID
+    uuid: str
     full_name: str
     role: List[dict]
     film_ids: List[UUID]
