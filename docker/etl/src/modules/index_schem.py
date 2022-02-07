@@ -170,7 +170,7 @@ def persons_index() -> dict:
                     }
                 },
                 "film_ids": {
-                    "type": "text"
+                    "type": "keyword"
                 },
             }
         }

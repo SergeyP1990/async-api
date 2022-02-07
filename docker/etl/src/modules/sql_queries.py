@@ -105,7 +105,7 @@ def person_sql() -> sql.SQL:
                p.full_name,
                p.updated_at,
                JSON_AGG(DISTINCT jsonb_build_object('uuid', pfw.film_work_id, 'role', pfw.role) ) as "role",
-               ARRAY_AGG(DISTINCT pfw.film_work_id ) AS "film_ids"
+               JSON_AGG(DISTINCT pfw.film_work_id) AS "film_ids"
         FROM content.person p
         LEFT JOIN content.person_film_work pfw ON pfw.person_id = p.id
         WHERE p.updated_at > {updated_at}
