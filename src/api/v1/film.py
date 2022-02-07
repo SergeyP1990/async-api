@@ -1,31 +1,30 @@
 from http import HTTPStatus
+from typing import List
+from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
-from uuid import UUID
-from typing import List, Optional
-
 from services.film import FilmService, get_film_service
 
 router = APIRouter()
 
 
-class Film(BaseModel):
+class FilmSmall(BaseModel):
     uuid: UUID
     title: str
-    imdb_rating: float
+    imdb_rating: float = None
 
 
-class FilmDetail(Film):
-    description: Optional[str]
-    genre: List[dict]
-    actors: List[dict]
-    writers: List[dict]
-    directors: List[dict]
+class Film(FilmSmall):
+    description: str = None
+    genre: List[dict] = None
+    actors: List[dict] = None
+    writers: List[dict] = None
+    directors: List[dict] = None
 
 
 # Внедряем FilmService с помощью Depends(get_film_service)
-@router.get('/{film_id}', response_model=FilmDetail)
+@router.get('/{film_id}', response_model=Film)
 async def film_details(film_id: str,
                        film_service: FilmService = Depends(get_film_service)
                        ) -> Film:
@@ -38,12 +37,18 @@ async def film_details(film_id: str,
 
     # Перекладываем данные из models.Film в Film
     # Обратите внимание, что у модели бизнес-логики есть поле description
-        # Которое отсутствует в модели ответа API.
-        # Если бы использовалась общая модель для бизнес-логики и формирования ответов API
-        # вы бы предоставляли клиентам данные, которые им не нужны
-        # и, возможно, данные, которые опасно возвращать
-    return FilmDetail(uuid=film.uuid, title=film.title, imdb_rating=film.imdb_rating, description=film.description,
-                      genre=film.genre, actors=film.actors, writers=film.writers, directors=film.directors)
+    # Которое отсутствует в модели ответа API.
+    # Если бы использовалась общая модель для бизнес-логики и формирования ответов API
+    # вы бы предоставляли клиентам данные, которые им не нужны
+    # и, возможно, данные, которые опасно возвращать
+    return Film(uuid=film.uuid,
+                title=film.title,
+                imdb_rating=film.imdb_rating,
+                description=film.description,
+                genre=film.genre,
+                actors=film.actors,
+                writers=film.writers,
+                directors=film.directors)
 
 
 @router.get('/')
@@ -53,9 +58,18 @@ async def film_main(
         page_number: int = Query(1, alias="page[number]"),
         filter_genre: str = Query(None, alias="filter[genre]"),
         film_service: FilmService = Depends(get_film_service)
-        ) -> List[Film]:
-    data = await film_service.get_film_pagination(sort, page_size, page_number, filter_genre)
-    films = [Film(uuid=film.uuid, title=film.title, imdb_rating=film.imdb_rating) for film in data]
+) -> List[FilmSmall]:
+    data = await film_service.get_film_pagination(sort,
+                                                  page_size,
+                                                  page_number,
+                                                  filter_genre)
+    if data:
+        films = [FilmSmall(uuid=film.uuid,
+                           title=film.title,
+                           imdb_rating=film.imdb_rating
+                           ) for film in data]
+    else:
+        films = None
     return films
 
 
@@ -65,7 +79,13 @@ async def film_search(
         page_size: int = Query(50, alias="page[size]"),
         page_number: int = Query(1, alias="page[number]"),
         film_service: FilmService = Depends(get_film_service)
-        ) -> List[Film]:
+) -> List[FilmSmall]:
     data = await film_service.get_film_search(query, page_size, page_number)
-    films = [Film(uuid=film.uuid, title=film.title, imdb_rating=film.imdb_rating) for film in data]
+    if data:
+        films = [FilmSmall(uuid=film.uuid,
+                           title=film.title,
+                           imdb_rating=film.imdb_rating
+                           ) for film in data]
+    else:
+        films = None
     return films
