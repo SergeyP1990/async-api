@@ -532,9 +532,9 @@ if __name__ == "__main__":
 
     while True:
         load_dotenv()
-        pg_dsl = conf.pg_database.dict()
-        pg_dsl["password"] = os.environ.get("ETL_DB_PASSWD")
-        pg_dsl["user"] = os.environ.get("ETL_DB_USER")
+        pg_dsl = {"dbname": os.environ.get("ETL_DB_NAME"), "port": os.environ.get("ETL_DB_PORT"),
+                  "host": os.environ.get("ETL_DB_HOST"), "password": os.environ.get("ETL_DB_PASSWD"),
+                  "user": os.environ.get("ETL_DB_USER")}
 
         elastic_host = os.environ.get("ETL_ES_HOST")
         elastic_port = int(os.environ.get("ETL_ES_PORT"))
