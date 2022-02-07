@@ -1,5 +1,4 @@
 from typing import List, Optional
-from uuid import UUID
 
 import orjson
 # Используем pydantic для упрощения работы при перегонке данных из json в объекты

@@ -2,6 +2,7 @@ from functools import lru_cache
 from typing import Optional, List, Dict
 from uuid import UUID
 
+import orjson
 from aioredis import Redis
 from elasticsearch import AsyncElasticsearch
 from fastapi import Depends
@@ -26,15 +27,11 @@ class PersonService:
         self.elastic = elastic
 
     async def get_by_id(self, person_id: str) -> Optional[Person]:
-        # Пытаемся получить данные из кеша, потому что оно работает быстрее
         person = await self._person_from_cache(person_id)
         if not person:
-            # Если фильма нет в кеше, то ищем его в Elasticsearch
             person = await self._get_person_from_elastic(person_id)
             if not person:
-                # Если он отсутствует в Elasticsearch, значит, фильма вообще нет в базе
                 return None
-            # Сохраняем фильм в кеш
             await self._put_person_to_cache(person)
 
         return person
@@ -52,11 +49,16 @@ class PersonService:
                 }
             }
         }
-        doc = await self._search_person_from_elastic(body)
-        return doc
+        key = f"person_search:{query}:{str(page_size)}:{str(page_number)}"
+        persons = await self._person_search_from_cache(key)
+        if not persons:
+            persons = await self._search_person_from_elastic(body)
+            await self._put_search_person_to_cache(key, persons)
+        return persons
 
     async def get_films_by_person(self, person_id):
         body = {
+            "size": 100,
             "query": {
                 "bool": {
                     "should": [
@@ -95,8 +97,12 @@ class PersonService:
                 }
             }
         }
-        doc = await self._get_films_from_elastic(body)
-        return doc
+        key = f"films_by_person:{person_id}"
+        films = await self._films_by_person_from_cache(key)
+        if not films:
+            films = await self._get_films_from_elastic(body)
+            await self._put_films_by_person_to_cache(key, films)
+        return films
 
     async def _get_person_from_elastic(self, person_id):
         doc = await self.elastic.get(index="persons", id=person_id)
@@ -109,8 +115,28 @@ class PersonService:
         person = Person.parse_raw(data)
         return person
 
+    async def _person_search_from_cache(self, key):
+        data = await self.redis.get(key)
+        if not data:
+            return None
+        persons = [Person.parse_raw(_data) for _data in orjson.loads(data)]
+        return persons
+
+    async def _films_by_person_from_cache(self, key):
+        data = await self.redis.get(key)
+        if not data:
+            return None
+        films = [Film.parse_raw(_data) for _data in orjson.loads(data)]
+        return films
+
     async def _put_person_to_cache(self, person):
         await self.redis.set(person.uuid, person.json(), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+
+    async def _put_search_person_to_cache(self, key, persons):
+        await self.redis.set(key, orjson.dumps(persons, default=Person.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+
+    async def _put_films_by_person_to_cache(self, key, films):
+        await self.redis.set(key, orjson.dumps(films, default=Film.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _search_person_from_elastic(self, body: Dict):
         doc = await self.elastic.search(index="persons", body=body)

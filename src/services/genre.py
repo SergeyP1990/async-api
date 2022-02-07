@@ -1,6 +1,7 @@
 from functools import lru_cache
 from typing import Optional, List, Dict
 
+import orjson
 from aioredis import Redis
 from elasticsearch import AsyncElasticsearch
 from fastapi import Depends
@@ -23,19 +24,19 @@ class GenreService:
                 "match_all": {},
             }
         }
-        doc = await self._get_genres_from_elastic(body)
-        return doc
+        key = 'genres_all'
+        genres = await self._genres_from_cache(key)
+        if not genres:
+            genres = await self._get_genres_from_elastic(body)
+            await self._put_genres_to_cache(key, genres)
+        return genres
 
     async def get_by_id(self, genre_id: str) -> Optional[Genre]:
-        # Пытаемся получить данные из кеша, потому что оно работает быстрее
         genre = await self._genre_from_cache(genre_id)
         if not genre:
-            # Если жанра нет в кеше, то ищем его в Elasticsearch
             genre = await self._get_genre_from_elastic(genre_id)
             if not genre:
-                # Если он отсутствует в Elasticsearch, значит, жанра вообще нет в базе
                 return None
-            # Сохраняем жанр в кеш
             await self._put_genre_to_cache(genre)
 
         return genre
@@ -47,7 +48,7 @@ class GenreService:
         return list_genres
 
     async def _get_genre_from_elastic(self, genre_id: str) -> Optional[Genre]:
-        doc = await self.elastic.get('genres', genre_id)
+        doc = await self.elastic.get(index="genres", id=genre_id)
         return Genre(**doc['_source'])
 
     async def _genre_from_cache(self, genre_id: str) -> Optional[Genre]:
@@ -58,8 +59,18 @@ class GenreService:
         genre = Genre.parse_raw(data)
         return genre
 
+    async def _genres_from_cache(self, key):
+        data = await self.redis.get(key)
+        if not data:
+            return None
+        genres = [Genre.parse_raw(_data) for _data in orjson.loads(data)]
+        return genres
+
     async def _put_genre_to_cache(self, genre: Genre):
         await self.redis.set(genre.uuid, genre.json(), expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
+
+    async def _put_genres_to_cache(self, key, genres):
+        await self.redis.set(key, orjson.dumps(genres, default=Genre.json), expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
 
 
 @lru_cache()
