@@ -1,8 +1,7 @@
-import datetime
-
 import orjson
 
 from uuid import UUID
+from typing import List
 
 # Используем pydantic для упрощения работы при перегонке данных из json в объекты
 from pydantic import BaseModel
@@ -13,10 +12,14 @@ def orjson_dumps(v, *, default):
     return orjson.dumps(v, default=default).decode()
 
 
-class Genre(BaseModel):
-    id: str
+class Person(BaseModel):
+    uuid: UUID
     full_name: str
-    birth_date: datetime.datetime
+    role: List[dict]
+    film_ids: List[UUID]
+
+    def __post_init__(self):
+        print(self.film_ids)
 
     class Config:
         # Заменяем стандартную работу с json на более быструю
