@@ -15,6 +15,7 @@ class FilmSmall(BaseModel):
     imdb_rating: float = None
 
 
+
 class Film(FilmSmall):
     description: str = None
     genre: List[dict] = None
