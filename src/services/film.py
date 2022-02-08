@@ -9,7 +9,7 @@ from fastapi import Depends
 from models.film import Film
 from models.base import orjson_dumps
 from orjson import loads as orjson_loads
-from cache_key_generator import generate_key
+from services.cache_key_generator import generate_key
 
 FILM_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 

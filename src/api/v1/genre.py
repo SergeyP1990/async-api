@@ -5,7 +5,7 @@ from typing import List
 
 from services.genre import GenreService, get_genre_service
 from models.genre import Genre
-from error_messages import APIErrors
+from api.v1.error_messages import APIErrors
 
 router = APIRouter()
 

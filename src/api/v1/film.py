@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from services.film import FilmService, get_film_service
 
 from models.film import Film, FilmSmall
-from error_messages import APIErrors
+from api.v1.error_messages import APIErrors
 
 router = APIRouter()
 
