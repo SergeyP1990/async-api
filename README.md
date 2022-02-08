@@ -3,7 +3,7 @@
 
 ### Требования:
   - python3 >= 3.8.10
-  - [docker-compose](https://docs.docker.com/compose/) >= 1.29.2
+  - [docker-compose](https://docs.docker.com/compose/install/) >= 1.29.2
   - База данных с фильмами из предыдущих спринтов
 
 ### Установка:
