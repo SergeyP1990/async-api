@@ -9,6 +9,7 @@ from fastapi import Depends
 from models.film import Film
 from models.base import orjson_dumps
 from orjson import loads as orjson_loads
+from cache_key_generator import generate_key
 
 FILM_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
@@ -17,7 +18,6 @@ class FilmService:
     def __init__(self, redis: Redis, elastic: AsyncElasticsearch):
         self.redis = redis
         self.elastic = elastic
-        self.redis_key = ''
 
     # Функция подготовки body для поиска по фильмам с пагинацией
     async def get_film_search(
@@ -37,14 +37,23 @@ class FilmService:
             }
         }
         # Здесь формируется ключ для кеширования запроса в Redis
-        self.redis_key = f'films_search{query}' \
-                         f'{str(page_size)}{str(page_number)}'
-        doc = await self._films_from_cache(self.redis_key)
+        params = {
+            "method": "films_search",
+            "query": query,
+            "page_size": page_size,
+            "page_number": page_number,
+        }
+        key = generate_key("movies", params)
+        doc = await self._get_films_through_cache(key, body)
+        return doc
+
+    async def _get_films_through_cache(self, key, body):
+        doc = await self._films_from_cache(key)
         if not doc:
             doc = await self._search_films_from_elastic(body)
             if not doc:
                 return None
-            await self._put_films_to_cache(self.redis_key, doc)
+            await self._put_films_to_cache(key, doc)
         return doc
 
     # Функция подготовки body для получения отсортированных фильмов
@@ -86,20 +95,23 @@ class FilmService:
                 }
             }
         # Здесь формируется ключ для кеширования запроса в Redis
-        self.redis_key = f'films{sort}{order_value}{str(page_size)}' \
-                         f'{str(page_number)}{filter_genre}'
-        doc = await self._films_from_cache(self.redis_key)
-        if not doc:
-            doc = await self._search_films_from_elastic(body)
-            if not doc:
-                return None
-            await self._put_films_to_cache(self.redis_key, doc)
+        params = {
+            "method": "films",
+            "sort_by": sort,
+            "order": order_value,
+            "page_size": page_size,
+            "page_number": page_number,
+            "filter_by": filter_genre
+        }
+        key = generate_key("movies", params)
+        doc = await self._get_films_through_cache(key, body)
         return doc
 
     # get_by_id возвращает объект фильма. Он опционален, так как фильм может отсутствовать в базе
     async def get_by_id(self, film_id: str) -> Optional[Film]:
         # Пытаемся получить данные из кеша, потому что оно работает быстрее
-        film = await self._film_from_cache(film_id)
+        key = generate_key("movies", {"by_id": film_id})
+        film = await self._film_from_cache(key)
         if not film:
             # Если фильма нет в кеше, то ищем его в Elasticsearch
             film = await self._get_film_from_elastic(film_id)
@@ -107,7 +119,7 @@ class FilmService:
                 # Если он отсутствует в Elasticsearch, значит, фильма вообще нет в базе
                 return None
             # Сохраняем фильм  в кеш
-            await self._put_film_to_cache(film)
+            await self._put_film_to_cache(key, film)
 
         return film
 
@@ -123,8 +135,8 @@ class FilmService:
         return Film(**doc['_source'])
 
     # Функция возвращает фильм из кэша
-    async def _film_from_cache(self, film_id: str) -> Optional[Film]:
-        data = await self.redis.get(film_id)
+    async def _film_from_cache(self, key: str) -> Optional[Film]:
+        data = await self.redis.get(key)
         if not data:
             return None
         film = Film.parse_raw(data)
@@ -139,9 +151,9 @@ class FilmService:
         return obj
 
     # Функция добавляет фильм в кэш Редис
-    async def _put_film_to_cache(self, film: Film):
+    async def _put_film_to_cache(self, redis_key, film: Film):
         await self.redis.set(
-            film.uuid,
+            redis_key,
             film.json(),
             expire=FILM_CACHE_EXPIRE_IN_SECONDS
         )

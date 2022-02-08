@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 
 from models.person import Person
 from services.person import PersonService, get_person_service, FilmSmall
+from error_messages import APIErrors
 
 router = APIRouter()
 
@@ -15,7 +16,7 @@ async def person_details(person_id: str,
                          ) -> Person:
     person = await person_service.get_by_id(person_id)
     if not person:
-        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='person not found')
+        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail=APIErrors.PERSON_NOT_FOUND)
 
     return person
 
@@ -34,5 +35,5 @@ async def person_search(person_id: str,
                         persons_service: PersonService = Depends(get_person_service)) -> List[FilmSmall]:
     data = await persons_service.get_films_by_person(person_id)
     if not data:
-        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='person not found')
+        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail=APIErrors.PERSON_NOT_FOUND)
     return data

@@ -122,8 +122,8 @@ class PersonService:
         films = [FilmSmall.parse_raw(_data) for _data in orjson.loads(data)]
         return films
 
-    async def _put_person_to_cache(self, person):
-        await self.redis.set(person.uuid, person.json(), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+    async def _put_person_to_cache(self, key, person):
+        await self.redis.set(key, person.json(), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _put_search_person_to_cache(self, key, persons):
         await self.redis.set(key, orjson.dumps(persons, default=Person.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)

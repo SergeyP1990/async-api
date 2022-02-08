@@ -66,8 +66,8 @@ class GenreService:
         genres = [Genre.parse_raw(_data) for _data in orjson.loads(data)]
         return genres
 
-    async def _put_genre_to_cache(self, genre: Genre):
-        await self.redis.set(genre.uuid, genre.json(), expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
+    async def _put_genre_to_cache(self, key, genre: Genre):
+        await self.redis.set(key, genre.json(), expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
 
     async def _put_genres_to_cache(self, key, genres):
         await self.redis.set(key, orjson.dumps(genres, default=Genre.json), expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
