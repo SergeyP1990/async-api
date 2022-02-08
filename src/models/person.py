@@ -9,6 +9,3 @@ class Person(BaseOrjsonModel):
     full_name: str
     role: List[dict]
     film_ids: List[UUID]
-
-    def __post_init__(self):
-        print(self.film_ids)

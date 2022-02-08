@@ -10,6 +10,7 @@ from db.elastic import get_elastic
 from db.redis import get_redis
 from models.person import Person
 from models.film import FilmSmall
+from services.cache_key_generator import generate_key
 
 PERSON_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
@@ -20,12 +21,13 @@ class PersonService:
         self.elastic = elastic
 
     async def get_by_id(self, person_id: str) -> Optional[Person]:
+        key = generate_key("movies", {"by_id": person_id})
         person = await self._person_from_cache(person_id)
         if not person:
             person = await self._get_person_from_elastic(person_id)
             if not person:
                 return None
-            await self._put_person_to_cache(person)
+            await self._put_person_to_cache(key, person)
 
         return person
 
@@ -42,7 +44,13 @@ class PersonService:
                 }
             }
         }
-        key = f"person_search:{query}:{str(page_size)}:{str(page_number)}"
+        params = {
+            "method": "person_search",
+            "query": query,
+            "page_size": page_size,
+            "page_number": page_number,
+        }
+        key = generate_key("persons", params)
         persons = await self._person_search_from_cache(key)
         if not persons:
             persons = await self._search_person_from_elastic(body)
@@ -90,7 +98,11 @@ class PersonService:
                 }
             }
         }
-        key = f"films_by_person:{person_id}"
+        params = {
+            "method": "films_by_person",
+            "person_id": person_id,
+        }
+        key = generate_key("persons", params)
         films = await self._films_by_person_from_cache(key)
         if not films:
             films = await self._get_films_from_elastic(body)
@@ -98,7 +110,9 @@ class PersonService:
         return films
 
     async def _get_person_from_elastic(self, person_id):
-        doc = await self.elastic.get(index="persons", id=person_id)
+        doc = await self.elastic.get(index="persons", id=person_id, ignore=[404])
+        if doc.get('_source') is None:
+            return None
         return Person(**doc['_source'])
 
     async def _person_from_cache(self, person_id):
@@ -122,8 +136,8 @@ class PersonService:
         films = [FilmSmall.parse_raw(_data) for _data in orjson.loads(data)]
         return films
 
-    async def _put_person_to_cache(self, person):
-        await self.redis.set(person.uuid, person.json(), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+    async def _put_person_to_cache(self, key, person):
+        await self.redis.set(key, person.json(), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _put_search_person_to_cache(self, key, persons):
         await self.redis.set(key, orjson.dumps(persons, default=Person.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)

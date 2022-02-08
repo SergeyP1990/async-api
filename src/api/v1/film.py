@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from services.film import FilmService, get_film_service
 
 from models.film import Film, FilmSmall
+from api.v1.error_messages import APIErrors
 
 router = APIRouter()
 
@@ -19,7 +20,7 @@ async def film_details(film_id: str,
         # Если фильм не найден, отдаём 404 статус
         # Желательно пользоваться уже определёнными HTTP-статусами, которые содержат enum
         # Такой код будет более поддерживаемым
-        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='film not found')
+        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail=APIErrors.FILM_NOT_FOUND)
 
     # Перекладываем данные из models.Film в Film
     # Обратите внимание, что у модели бизнес-логики есть поле description

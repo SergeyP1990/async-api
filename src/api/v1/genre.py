@@ -5,6 +5,7 @@ from typing import List
 
 from services.genre import GenreService, get_genre_service
 from models.genre import Genre
+from api.v1.error_messages import APIErrors
 
 router = APIRouter()
 
@@ -16,7 +17,7 @@ async def genre_details(genre_id: str,
                         ) -> Genre:
     genre = await genre_service.get_by_id(genre_id)
     if not genre:
-        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='genre not found')
+        raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail=APIErrors.GENRE_NOT_FOUND)
 
     return genre
 
