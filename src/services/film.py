@@ -131,7 +131,9 @@ class FilmService:
 
     # Функция возвращает фильм по переданному ИД
     async def _get_film_from_elastic(self, film_id: str) -> Optional[Film]:
-        doc = await self.elastic.get('movies', film_id)
+        doc = await self.elastic.get('movies', film_id, ignore=[404])
+        if doc.get('_source') is None:
+            return None
         return Film(**doc['_source'])
 
     # Функция возвращает фильм из кэша

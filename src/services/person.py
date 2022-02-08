@@ -98,7 +98,9 @@ class PersonService:
         return films
 
     async def _get_person_from_elastic(self, person_id):
-        doc = await self.elastic.get(index="persons", id=person_id)
+        doc = await self.elastic.get(index="persons", id=person_id, ignore=[404])
+        if doc.get('_source') is None:
+            return None
         return Person(**doc['_source'])
 
     async def _person_from_cache(self, person_id):
