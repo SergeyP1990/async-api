@@ -1,16 +1,11 @@
-import logging
-
 import aioredis
-import uvicorn as uvicorn
 from elasticsearch import AsyncElasticsearch
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
 from api.v1 import film, genre, person
 from core import config
-from core.logger import LOGGING
-from db import elastic
-from db import redis
+from db import elastic, redis
 
 app = FastAPI(
     # Конфигурируем название проекта. Оно будет отображаться в документации
@@ -46,17 +41,3 @@ async def shutdown():
 app.include_router(film.router, prefix='/api/v1/film', tags=['film'])
 app.include_router(genre.router, prefix='/api/v1/genre', tags=['genre'])
 app.include_router(person.router, prefix='/api/v1/person', tags=['person'])
-
-
-if __name__ == '__main__':
-    # Приложение может запускаться командой
-    # `uvicorn main:app --host 0.0.0.0 --port 8000`
-    # но чтобы не терять возможность использовать дебагер,
-    # запустим uvicorn сервер через python
-    uvicorn.run(
-        'main:app',
-        host='0.0.0.0',
-        port=8000,
-        log_config=LOGGING,
-        log_level=logging.DEBUG,
-    )

@@ -4,7 +4,7 @@ from typing import List
 from fastapi import APIRouter, Depends, HTTPException, Query
 
 from models.person import Person
-from services.person import PersonService, get_person_service, Film
+from services.person import PersonService, get_person_service, FilmSmall
 
 router = APIRouter()
 
@@ -31,7 +31,7 @@ async def person_search(query: str,
 
 @router.get('/{person_id}/film')
 async def person_search(person_id: str,
-                        persons_service: PersonService = Depends(get_person_service)) -> List[Film]:
+                        persons_service: PersonService = Depends(get_person_service)) -> List[FilmSmall]:
     data = await persons_service.get_films_by_person(person_id)
     if not data:
         raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail='person not found')
