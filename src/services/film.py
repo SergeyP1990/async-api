@@ -7,7 +7,7 @@ from db.redis import get_redis
 from elasticsearch import AsyncElasticsearch
 from fastapi import Depends
 from models.film import Film
-from models.film import orjson_dumps
+from models.base import orjson_dumps
 from orjson import loads as orjson_loads
 
 FILM_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут

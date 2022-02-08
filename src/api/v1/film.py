@@ -1,27 +1,12 @@
 from http import HTTPStatus
 from typing import List
-from uuid import UUID
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from pydantic import BaseModel
 from services.film import FilmService, get_film_service
 
+from models.film import Film, FilmSmall
+
 router = APIRouter()
-
-
-class FilmSmall(BaseModel):
-    uuid: UUID
-    title: str
-    imdb_rating: float = None
-
-
-
-class Film(FilmSmall):
-    description: str = None
-    genre: List[dict] = None
-    actors: List[dict] = None
-    writers: List[dict] = None
-    directors: List[dict] = None
 
 
 # Внедряем FilmService с помощью Depends(get_film_service)

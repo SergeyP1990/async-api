@@ -1,24 +1,17 @@
 from functools import lru_cache
 from typing import Optional, List, Dict
-from uuid import UUID
 
 import orjson
 from aioredis import Redis
 from elasticsearch import AsyncElasticsearch
 from fastapi import Depends
-from pydantic import BaseModel
 
 from db.elastic import get_elastic
 from db.redis import get_redis
 from models.person import Person
+from models.film import FilmSmall
 
 PERSON_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
-
-
-class Film(BaseModel):
-    uuid: UUID
-    title: str
-    imdb_rating: float
 
 
 class PersonService:
@@ -126,7 +119,7 @@ class PersonService:
         data = await self.redis.get(key)
         if not data:
             return None
-        films = [Film.parse_raw(_data) for _data in orjson.loads(data)]
+        films = [FilmSmall.parse_raw(_data) for _data in orjson.loads(data)]
         return films
 
     async def _put_person_to_cache(self, person):
@@ -136,7 +129,7 @@ class PersonService:
         await self.redis.set(key, orjson.dumps(persons, default=Person.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _put_films_by_person_to_cache(self, key, films):
-        await self.redis.set(key, orjson.dumps(films, default=Film.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+        await self.redis.set(key, orjson.dumps(films, default=FilmSmall.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _search_person_from_elastic(self, body: Dict):
         doc = await self.elastic.search(index="persons", body=body)
@@ -145,7 +138,7 @@ class PersonService:
 
     async def _get_films_from_elastic(self, body):
         doc = await self.elastic.search(index='movies', body=body)
-        films = [Film(**x['_source']) for x in doc['hits']['hits']]
+        films = [FilmSmall(**x['_source']) for x in doc['hits']['hits']]
         return films
 
 
