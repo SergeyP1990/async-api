@@ -9,6 +9,7 @@ from fastapi import Depends
 from db.elastic import get_elastic
 from db.redis import get_redis
 from models.genre import Genre
+from services.cache_key_generator import generate_key
 
 GENRE_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
@@ -24,7 +25,10 @@ class GenreService:
                 "match_all": {},
             }
         }
-        key = 'genres_all'
+        params = {
+            "method": "all_genres",
+        }
+        key = generate_key("genres", params)
         genres = await self._genres_from_cache(key)
         if not genres:
             genres = await self._get_genres_from_elastic(body)
@@ -32,17 +36,18 @@ class GenreService:
         return genres
 
     async def get_by_id(self, genre_id: str) -> Optional[Genre]:
-        genre = await self._genre_from_cache(genre_id)
+        key = generate_key("genres", {"by_id": genre_id})
+        genre = await self._genre_from_cache(key)
         if not genre:
             genre = await self._get_genre_from_elastic(genre_id)
             if not genre:
                 return None
-            await self._put_genre_to_cache(genre)
+            await self._put_genre_to_cache(key, genre)
 
         return genre
 
     # Функция возвращает список жанров по переданному body
-    async def _get_genres_from_elastic(self, body: Dict):
+    async def _get_genres_from_elastic(self, body: Dict) -> List[Genre]:
         doc = await self.elastic.search(index='genres', body=body)
         list_genres = [Genre(**x['_source']) for x in doc['hits']['hits']]
         return list_genres
@@ -53,25 +58,25 @@ class GenreService:
             return None
         return Genre(**doc['_source'])
 
-    async def _genre_from_cache(self, genre_id: str) -> Optional[Genre]:
-        data = await self.redis.get(genre_id)
+    async def _genre_from_cache(self, key: str) -> Optional[Genre]:
+        data = await self.redis.get(key)
         if not data:
             return None
         # pydantic предоставляет удобное API для создания объекта моделей из json
         genre = Genre.parse_raw(data)
         return genre
 
-    async def _genres_from_cache(self, key):
+    async def _genres_from_cache(self, key: str) -> Optional[List[Genre]]:
         data = await self.redis.get(key)
         if not data:
             return None
         genres = [Genre.parse_raw(_data) for _data in orjson.loads(data)]
         return genres
 
-    async def _put_genre_to_cache(self, key, genre: Genre):
+    async def _put_genre_to_cache(self, key, genre: Genre) -> None:
         await self.redis.set(key, genre.json(), expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
 
-    async def _put_genres_to_cache(self, key, genres):
+    async def _put_genres_to_cache(self, key, genres) -> None:
         await self.redis.set(key, orjson.dumps(genres, default=Genre.json), expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
 
 
