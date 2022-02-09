@@ -1,4 +1,3 @@
-ссылка на issue от ревьювера https://github.com/SergeyP1990/async-api/issues/19
 ## Сервис, реализующий API кинотеатра на FastAPI согласно ТЗ
 
 
