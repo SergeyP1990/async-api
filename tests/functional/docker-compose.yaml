@@ -1,0 +1,21 @@
+services:
+
+  tests:
+    build:
+      context: .
+    entrypoint: >
+      sh -c "python3 /usr/src/tests/utils/wait_for_es.py
+      && python3 /usr/src/tests/utils/wait_for_redis.py
+      && pytest tests/src"
+    env_file:
+      - .env
+    restart: on-failure
+    networks:
+      - test_net
+
+
+
+networks:
+    test_net:
+        name: test_net
+        external: true
