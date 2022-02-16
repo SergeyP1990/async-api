@@ -1,9 +1,17 @@
 import aiohttp
 import pytest
 import sys
+import asyncio
 from elasticsearch import AsyncElasticsearch
 sys.path.append('/usr/src/tests/')
 from settings import HTTPResponse, test_settings
+
+
+@pytest.fixture(scope='session')
+def event_loop():
+    loop = asyncio.get_event_loop_policy().new_event_loop()
+    yield loop
+    loop.close()
 
 
 @pytest.fixture(scope='session')
@@ -31,7 +39,7 @@ def make_get_request(session):
     async def inner(method: str, params: dict = None) -> HTTPResponse:
         params = params or {}
         url = '{protocol}://{service_url}/api/v{api_version}/{method}'.format(
-            protocol=test_settings.protocol,
+            protocol=test_settings.service_protocol,
             service_url=test_settings.service_url,
             api_version=test_settings.api_version,
             method=method

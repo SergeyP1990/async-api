@@ -1,10 +1,15 @@
-import time
 import sys
+import time
+
 from redis import Redis, ConnectionError
+
 sys.path.append('/usr/src/tests/')
 from settings import test_settings
 
-r = Redis(host=test_settings.redis_host, port=test_settings.redis_port)
+r = Redis(
+    host=test_settings.redis_host,
+    port=test_settings.redis_port
+)
 
 is_connected = False
 
