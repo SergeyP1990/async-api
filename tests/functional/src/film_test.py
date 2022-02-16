@@ -2,9 +2,8 @@ import pytest
 
 
 @pytest.mark.asyncio
-async def test_get_films_data(make_get_request):
+async def test_get_films_data_default(make_get_request):
     response = await make_get_request('film/')
-    print(response.body[0]['imdb_rating'])
     assert response.status == 200
     assert len(response.body) == 50
     assert response.body[0]['imdb_rating'] == 9.6
@@ -12,9 +11,17 @@ async def test_get_films_data(make_get_request):
 
 
 @pytest.mark.asyncio
+async def test_get_all_films_data(make_get_request):
+    response = await make_get_request('film/?page[size]=1000')
+    assert response.status == 200
+    assert len(response.body) == 999
+    assert response.body[0]['imdb_rating'] == 9.6
+    assert response.body[998]['imdb_rating'] == None
+
+
+@pytest.mark.asyncio
 async def test_get_films_data_by_filter_comedy_and_sort_asc(make_get_request):
     response = await make_get_request('film/?sort=imdb_rating&filter[genre]=comedy')
-    print(response.body[0]['imdb_rating'])
     assert response.status == 200
     assert len(response.body) == 50
     assert response.body[0]['imdb_rating'] == 1.8
