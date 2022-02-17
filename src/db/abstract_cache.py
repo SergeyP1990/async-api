@@ -9,11 +9,16 @@ class BaseCacheStorage:
         pass
 
     @abc.abstractmethod
+    async def close(self) -> None:
+        """Закрыть подключение к кэшу"""
+        pass
+
+    @abc.abstractmethod
     async def read(self, key: str) -> Optional[Any]:
         """Получить данные из кэша по ключу"""
         pass
 
     @abc.abstractmethod
-    async def write(self, key: str, data: Any) -> None:
+    async def write(self, key: str, data: Any, expire: int) -> None:
         """Записать данные по ключу"""
         pass

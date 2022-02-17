@@ -2,12 +2,13 @@ from functools import lru_cache
 from typing import Optional, List, Dict
 
 import orjson
-from aioredis import Redis
+# from aioredis import Redis
+from db.abstract_cache import BaseCacheStorage
 from elasticsearch import AsyncElasticsearch
-from fastapi import Depends
 
+from fastapi import Depends
 from db.elastic import get_elastic
-from db.redis import get_cache
+from db.cache import get_cache
 from models.person import Person
 from models.film import FilmSmall
 from services.cache_key_generator import generate_key
@@ -16,8 +17,8 @@ PERSON_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
 
 class PersonService:
-    def __init__(self, redis: Redis, elastic: AsyncElasticsearch):
-        self.redis = redis
+    def __init__(self, cache: BaseCacheStorage, elastic: AsyncElasticsearch):
+        self.cache_service = cache
         self.elastic = elastic
 
     async def get_by_id(self, person_id: str) -> Optional[Person]:
@@ -116,34 +117,34 @@ class PersonService:
         return Person(**doc['_source'])
 
     async def _person_from_cache(self, person_id):
-        data = await self.redis.get(person_id)
+        data = await self.cache_service.read(person_id)
         if not data:
             return None
         person = Person.parse_raw(data)
         return person
 
     async def _person_search_from_cache(self, key):
-        data = await self.redis.get(key)
+        data = await self.cache_service.read(key)
         if not data:
             return None
         persons = [Person.parse_raw(_data) for _data in orjson.loads(data)]
         return persons
 
     async def _films_by_person_from_cache(self, key):
-        data = await self.redis.get(key)
+        data = await self.cache_service.read(key)
         if not data:
             return None
         films = [FilmSmall.parse_raw(_data) for _data in orjson.loads(data)]
         return films
 
     async def _put_person_to_cache(self, key, person):
-        await self.redis.set(key, person.json(), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+        await self.cache_service.write(key, person.json(), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _put_search_person_to_cache(self, key, persons):
-        await self.redis.set(key, orjson.dumps(persons, default=Person.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+        await self.cache_service.write(key, orjson.dumps(persons, default=Person.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _put_films_by_person_to_cache(self, key, films):
-        await self.redis.set(key, orjson.dumps(films, default=FilmSmall.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
+        await self.cache_service.write(key, orjson.dumps(films, default=FilmSmall.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
     async def _search_person_from_elastic(self, body: Dict):
         doc = await self.elastic.search(index="persons", body=body)
@@ -158,7 +159,7 @@ class PersonService:
 
 @lru_cache()
 def get_person_service(
-        redis: Redis = Depends(get_cache),
+        cache: BaseCacheStorage = Depends(get_cache),
         elastic: AsyncElasticsearch = Depends(get_elastic),
 ) -> PersonService:
-    return PersonService(redis, elastic)
+    return PersonService(cache, elastic)

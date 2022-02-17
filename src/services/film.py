@@ -1,9 +1,10 @@
 from functools import lru_cache
 from typing import Optional, List, Dict
 
-from aioredis import Redis
+# from aioredis import Redis
+from db.abstract_cache import BaseCacheStorage
 from db.elastic import get_elastic
-from db.redis import get_cache
+from db.cache import get_cache
 from elasticsearch import AsyncElasticsearch
 from fastapi import Depends
 from models.film import Film
@@ -15,8 +16,8 @@ FILM_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
 
 class FilmService:
-    def __init__(self, redis: Redis, elastic: AsyncElasticsearch):
-        self.redis = redis
+    def __init__(self, cache: BaseCacheStorage, elastic: AsyncElasticsearch):
+        self.cache_service = cache
         self.elastic = elastic
 
     # Функция подготовки body для поиска по фильмам с пагинацией
@@ -138,7 +139,7 @@ class FilmService:
 
     # Функция возвращает фильм из кэша
     async def _film_from_cache(self, key: str) -> Optional[Film]:
-        data = await self.redis.get(key)
+        data = await self.cache_service.read(key)
         if not data:
             return None
         film = Film.parse_raw(data)
@@ -146,7 +147,7 @@ class FilmService:
 
     # Функция возвращает список фильмов из кэша
     async def _films_from_cache(self, redis_key) -> Optional[Film]:
-        data = await self.redis.get(redis_key)
+        data = await self.cache_service.read(redis_key)
         if not data:
             return None
         obj = [Film.parse_raw(_data) for _data in orjson_loads(data)]
@@ -154,7 +155,7 @@ class FilmService:
 
     # Функция добавляет фильм в кэш Редис
     async def _put_film_to_cache(self, redis_key, film: Film):
-        await self.redis.set(
+        await self.cache_service.write(
             redis_key,
             film.json(),
             expire=FILM_CACHE_EXPIRE_IN_SECONDS
@@ -162,7 +163,7 @@ class FilmService:
 
     # Функция добавляет список фильмов в кэш Редис
     async def _put_films_to_cache(self, redis_key, doc):
-        await self.redis.set(
+        await self.cache_service.write(
             redis_key,
             orjson_dumps(doc, default=Film.json),
             expire=FILM_CACHE_EXPIRE_IN_SECONDS
@@ -171,7 +172,7 @@ class FilmService:
 
 @lru_cache()
 def get_film_service(
-        redis: Redis = Depends(get_cache),
+        cache: BaseCacheStorage = Depends(get_cache),
         elastic: AsyncElasticsearch = Depends(get_elastic),
 ) -> FilmService:
-    return FilmService(redis, elastic)
+    return FilmService(cache, elastic)

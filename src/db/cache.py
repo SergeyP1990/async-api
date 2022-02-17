@@ -1,7 +1,7 @@
-from abstract_cache import BaseCacheStorage
-from redis import RedisCache
+from db.abstract_cache import BaseCacheStorage
+from db.redis import RedisCache
 
-cache = RedisCache()
+cache: BaseCacheStorage = RedisCache()
 
 
 # Функция понадобится при внедрении зависимостей
