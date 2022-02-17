@@ -7,6 +7,19 @@ from api.v1 import film, genre, person
 from core import config
 from db import elastic, redis
 
+
+from db.abstract_cache import RedisCache
+import asyncio
+
+
+_redis = RedisCache()
+print("created redis")
+print(_redis)
+print("put to cache")
+await _redis.write("123", "dsfsdfsdfdsf")
+print("prepare to exit")
+exit(0)
+
 app = FastAPI(
     # Конфигурируем название проекта. Оно будет отображаться в документации
     title=config.PROJECT_NAME,
