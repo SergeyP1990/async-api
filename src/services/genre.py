@@ -7,7 +7,7 @@ from elasticsearch import AsyncElasticsearch
 from fastapi import Depends
 
 from db.elastic import get_elastic
-from db.redis import get_redis
+from db.redis import get_cache
 from models.genre import Genre
 from services.cache_key_generator import generate_key
 
@@ -82,7 +82,7 @@ class GenreService:
 
 @lru_cache()
 def get_genre_service(
-        redis: Redis = Depends(get_redis),
+        redis: Redis = Depends(get_cache),
         elastic: AsyncElasticsearch = Depends(get_elastic),
 ) -> GenreService:
     return GenreService(redis, elastic)

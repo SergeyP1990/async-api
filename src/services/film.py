@@ -3,7 +3,7 @@ from typing import Optional, List, Dict
 
 from aioredis import Redis
 from db.elastic import get_elastic
-from db.redis import get_redis
+from db.redis import get_cache
 from elasticsearch import AsyncElasticsearch
 from fastapi import Depends
 from models.film import Film
@@ -171,7 +171,7 @@ class FilmService:
 
 @lru_cache()
 def get_film_service(
-        redis: Redis = Depends(get_redis),
+        redis: Redis = Depends(get_cache),
         elastic: AsyncElasticsearch = Depends(get_elastic),
 ) -> FilmService:
     return FilmService(redis, elastic)

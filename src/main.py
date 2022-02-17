@@ -10,15 +10,9 @@ from db import elastic, redis
 
 from db.abstract_cache import RedisCache
 import asyncio
+import uvicorn
 
 
-_redis = RedisCache()
-print("created redis")
-print(_redis)
-print("put to cache")
-await _redis.write("123", "dsfsdfsdfdsf")
-print("prepare to exit")
-exit(0)
 
 app = FastAPI(
     # Конфигурируем название проекта. Оно будет отображаться в документации
@@ -35,6 +29,15 @@ app = FastAPI(
 
 @app.on_event('startup')
 async def startup():
+    # _redis = RedisCache()
+    # print("created redis")
+    # print(_redis)
+    # print("Connect redis")
+    # await _redis.connect()
+    # print("put to cache")
+    # await _redis.write("123", "dsfsdfsdfdsf")
+    # print("prepare to exit")
+    # exit(0)
     # Подключаемся к базам при старте сервера
     # Подключиться можем при работающем event-loop
     # Поэтому логика подключения происходит в асинхронной функции
@@ -54,3 +57,11 @@ async def shutdown():
 app.include_router(film.router, prefix='/api/v1/film', tags=['film'])
 app.include_router(genre.router, prefix='/api/v1/genre', tags=['genre'])
 app.include_router(person.router, prefix='/api/v1/person', tags=['person'])
+
+
+if __name__ == '__main__':
+    uvicorn.run(
+        'main:app',
+        host='0.0.0.0',
+        port=8000,
+    )
