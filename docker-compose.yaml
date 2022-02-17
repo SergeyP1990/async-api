@@ -1,6 +1,7 @@
 services:
   db:
     build: ./docker/postgres
+    image: postgres-image
     expose:
       - 5432
     volumes:
@@ -8,7 +9,7 @@ services:
     env_file:
       - .env
     networks:
-      - test_net
+      - movie-api_net
 
   nginx:
     image: nginx:1.21.6
@@ -20,7 +21,7 @@ services:
     ports:
       - 80:80
     networks:
-      - test_net
+      - movie-api_net
 
   fast-api:
     build: ./src
@@ -33,7 +34,7 @@ services:
       - db
     restart: on-failure
     networks:
-      - test_net
+      - movie-api_net
 
   es:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1
@@ -46,7 +47,7 @@ services:
     volumes:
       - es_data:/usr/share/elasticsearch/data
     networks:
-      - test_net
+      - movie-api_net
 
   redis:
     restart: unless-stopped
@@ -56,24 +57,28 @@ services:
     volumes:
       - redis_data:/data
     networks:
-      - test_net
+      - movie-api_net
 
   etl:
     build: ./docker/etl
+    image: etl-image
     env_file:
       - .env
     depends_on:
       - db
       - es
     networks:
-      - test_net
+      - movie-api_net
 
 networks:
-    test_net:
-        name: test_net
+    movie-api_net:
+        name: movie-api_net
         driver: bridge
 
 volumes:
   postgres_data:
+    name: postgres_data
   es_data:
+    name: es_data
   redis_data:
+    name: redis_data
