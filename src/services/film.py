@@ -1,7 +1,6 @@
 from functools import lru_cache
 from typing import Optional, List, Dict
 
-# from aioredis import Redis
 from db.abstract_cache import BaseCacheStorage
 from db.elastic import get_elastic
 from db.cache import get_cache

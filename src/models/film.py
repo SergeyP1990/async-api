@@ -8,6 +8,7 @@ class FilmSmall(BaseOrjsonModel):
     title: str
     imdb_rating: float = None
 
+
 class Film(FilmSmall):
     description: str = None
     genre: Optional[List[dict]] = None

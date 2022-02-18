@@ -1,4 +1,3 @@
-import aioredis
 from elasticsearch import AsyncElasticsearch
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
@@ -7,12 +6,6 @@ from api.v1 import film, genre, person
 from core import config
 from db import elastic
 from db.cache import cache
-
-
-
-import uvicorn
-
-
 
 app = FastAPI(
     # Конфигурируем название проекта. Оно будет отображаться в документации
@@ -29,15 +22,6 @@ app = FastAPI(
 
 @app.on_event('startup')
 async def startup():
-    # _redis = RedisCache()
-    # print("created redis")
-    # print(_redis)
-    # print("Connect redis")
-    # await _redis.connect()
-    # print("put to cache")
-    # await _redis.write("123", "dsfsdfsdfdsf")
-    # print("prepare to exit")
-    # exit(0)
     # Подключаемся к базам при старте сервера
     # Подключиться можем при работающем event-loop
     # Поэтому логика подключения происходит в асинхронной функции
@@ -57,5 +41,4 @@ async def shutdown():
 app.include_router(film.router, prefix='/api/v1/film', tags=['film'])
 app.include_router(genre.router, prefix='/api/v1/genre', tags=['genre'])
 app.include_router(person.router, prefix='/api/v1/person', tags=['person'])
-
 

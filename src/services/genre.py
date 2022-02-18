@@ -2,7 +2,6 @@ from functools import lru_cache
 from typing import Optional, List, Dict
 
 import orjson
-# from aioredis import Redis
 from db.abstract_cache import BaseCacheStorage
 from elasticsearch import AsyncElasticsearch
 
