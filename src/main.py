@@ -1,10 +1,9 @@
-from elasticsearch import AsyncElasticsearch
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
 from api.v1 import film, genre, person
 from core import config
-from db import elastic
+from db.search_engine import search_engine
 from db.cache import cache
 
 app = FastAPI(
@@ -26,14 +25,14 @@ async def startup():
     # Подключиться можем при работающем event-loop
     # Поэтому логика подключения происходит в асинхронной функции
     await cache.connect()
-    elastic.es = AsyncElasticsearch(hosts=[f'{config.ELASTIC_HOST}:{config.ELASTIC_PORT}'])
+    await search_engine.connect()
 
 
 @app.on_event('shutdown')
 async def shutdown():
     # Отключаемся от баз при выключении сервера
     await cache.close()
-    await elastic.es.close()
+    await search_engine.close()
 
 
 # Подключаем роутер к серверу, указав префикс /v1/film
