@@ -5,7 +5,7 @@ from db.abstract_search_engine import BaseSearchEngine
 from core import config
 
 
-class AsyncElasticSearch(BaseSearchEngine):
+class AsyncElasticEngine(BaseSearchEngine):
     def __init__(self):
         self.search_engine: Optional[AsyncElasticsearch] = None
 
@@ -15,8 +15,13 @@ class AsyncElasticSearch(BaseSearchEngine):
     async def close(self) -> None:
         await self.search_engine.close()
 
-    async def search(self, query) -> Optional[List[Any]]:
-        pass
+    async def get(self, record_id, scope) -> Optional[Any]:
+        data = await self.search_engine.get(index=scope, id=record_id, ignore=[404])
+        if data.get("_source") is None:
+            return None
+        return data["_source"]
 
-    async def get(self, index, record_id) -> Optional[Any]:
-        return None
+    async def search(self, search_query, scope) -> Optional[List[Any]]:
+        raw_data = await self.search_engine.search(index=scope, body=search_query)
+        data = [src["_source"] for src in raw_data["hits"]["hits"]]
+        return data

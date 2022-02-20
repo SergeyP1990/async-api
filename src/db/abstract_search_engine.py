@@ -14,17 +14,11 @@ class BaseSearchEngine:
         pass
 
     @abc.abstractmethod
-    async def get(self, *args, **kwargs) -> Optional[Any]:
+    async def get(self, record_id: str, scope: str) -> Optional[Any]:
         """Выполнить запрос к движку по конкретному id"""
         pass
 
     @abc.abstractmethod
-    async def search(self, *args, **kwargs) -> Optional[List[Any]]:
+    async def search(self, search_query: Any, scope: str) -> Optional[List[Any]]:
         """Выполнить запрос на поиск элементов к движку"""
         pass
-
-
-
-#
-# a = AsyncElasticSearch()
-# a.get('index', 'data')

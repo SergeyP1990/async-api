@@ -2,29 +2,29 @@ from functools import lru_cache
 from typing import Optional, List, Dict
 
 import orjson
-from db.abstract_cache import BaseCacheStorage
-from elasticsearch import AsyncElasticsearch
-
 from fastapi import Depends
-from db.elastic import get_elastic
+
+from db.abstract_cache import BaseCacheStorage
+from db.abstract_search_engine import BaseSearchEngine
 from db.cache import get_cache
-from models.person import Person
+from db.search_engine import get_search_engine
 from models.film import FilmSmall
+from models.person import Person
 from services.cache_key_generator import generate_key
 
 PERSON_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
 
 class PersonService:
-    def __init__(self, cache: BaseCacheStorage, elastic: AsyncElasticsearch):
+    def __init__(self, cache: BaseCacheStorage, se: BaseSearchEngine):
         self.cache_service = cache
-        self.elastic = elastic
+        self.se = se
 
     async def get_by_id(self, person_id: str) -> Optional[Person]:
         key = generate_key("movies", {"by_id": person_id})
         person = await self._person_from_cache(person_id)
         if not person:
-            person = await self._get_person_from_elastic(person_id)
+            person = await self._get_person_from_db(person_id)
             if not person:
                 return None
             await self._put_person_to_cache(key, person)
@@ -53,7 +53,7 @@ class PersonService:
         key = generate_key("persons", params)
         persons = await self._person_search_from_cache(key)
         if not persons:
-            persons = await self._search_person_from_elastic(body)
+            persons = await self._search_person_from_db(body)
             await self._put_search_person_to_cache(key, persons)
         return persons
 
@@ -105,15 +105,15 @@ class PersonService:
         key = generate_key("persons", params)
         films = await self._films_by_person_from_cache(key)
         if not films:
-            films = await self._get_films_from_elastic(body)
+            films = await self._get_films_from_db(body)
             await self._put_films_by_person_to_cache(key, films)
         return films
 
-    async def _get_person_from_elastic(self, person_id):
-        doc = await self.elastic.get(index="persons", id=person_id, ignore=[404])
-        if doc.get('_source') is None:
+    async def _get_person_from_db(self, person_id):
+        doc = await self.se.get(scope="persons", record_id=person_id)
+        if doc is None:
             return None
-        return Person(**doc['_source'])
+        return Person(**doc)
 
     async def _person_from_cache(self, person_id):
         data = await self.cache_service.read(person_id)
@@ -145,20 +145,20 @@ class PersonService:
     async def _put_films_by_person_to_cache(self, key, films):
         await self.cache_service.write(key, orjson.dumps(films, default=FilmSmall.json), expire=PERSON_CACHE_EXPIRE_IN_SECONDS)
 
-    async def _search_person_from_elastic(self, body: Dict):
-        doc = await self.elastic.search(index="persons", body=body)
-        persons = [Person(**x['_source']) for x in doc['hits']['hits']]
+    async def _search_person_from_db(self, body: Dict):
+        doc = await self.se.search(scope="persons", search_query=body)
+        persons = [Person(**x) for x in doc]
         return persons
 
-    async def _get_films_from_elastic(self, body):
-        doc = await self.elastic.search(index='movies', body=body)
-        films = [FilmSmall(**x['_source']) for x in doc['hits']['hits']]
+    async def _get_films_from_db(self, body):
+        doc = await self.se.search(scope='movies', search_query=body)
+        films = [FilmSmall(**x) for x in doc]
         return films
 
 
 @lru_cache()
 def get_person_service(
         cache: BaseCacheStorage = Depends(get_cache),
-        elastic: AsyncElasticsearch = Depends(get_elastic),
+        search_engine: BaseSearchEngine = Depends(get_search_engine),
 ) -> PersonService:
-    return PersonService(cache, elastic)
+    return PersonService(cache, search_engine)

@@ -2,12 +2,12 @@ from functools import lru_cache
 from typing import Optional, List, Dict
 
 import orjson
-from db.abstract_cache import BaseCacheStorage
-from elasticsearch import AsyncElasticsearch
-
 from fastapi import Depends
-from db.elastic import get_elastic
+
+from db.abstract_cache import BaseCacheStorage
+from db.abstract_search_engine import BaseSearchEngine
 from db.cache import get_cache
+from db.search_engine import get_search_engine
 from models.genre import Genre
 from services.cache_key_generator import generate_key
 
@@ -15,9 +15,9 @@ GENRE_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
 
 class GenreService:
-    def __init__(self, cache: BaseCacheStorage, elastic: AsyncElasticsearch):
+    def __init__(self, cache: BaseCacheStorage, se: BaseSearchEngine):
         self.cache_service = cache
-        self.elastic = elastic
+        self.se = se
 
     async def get_genres(self) -> List[Genre]:
         body = {
@@ -31,7 +31,7 @@ class GenreService:
         key = generate_key("genres", params)
         genres = await self._genres_from_cache(key)
         if not genres:
-            genres = await self._get_genres_from_elastic(body)
+            genres = await self._get_genres_from_db(body)
             await self._put_genres_to_cache(key, genres)
         return genres
 
@@ -39,7 +39,7 @@ class GenreService:
         key = generate_key("genres", {"by_id": genre_id})
         genre = await self._genre_from_cache(key)
         if not genre:
-            genre = await self._get_genre_from_elastic(genre_id)
+            genre = await self._get_genre_from_db(genre_id)
             if not genre:
                 return None
             await self._put_genre_to_cache(key, genre)
@@ -47,16 +47,16 @@ class GenreService:
         return genre
 
     # Функция возвращает список жанров по переданному body
-    async def _get_genres_from_elastic(self, body: Dict) -> List[Genre]:
-        doc = await self.elastic.search(index='genres', body=body)
-        list_genres = [Genre(**x['_source']) for x in doc['hits']['hits']]
+    async def _get_genres_from_db(self, body: Dict) -> List[Genre]:
+        doc = await self.se.search(scope='genres', search_query=body)
+        list_genres = [Genre(**x) for x in doc]
         return list_genres
 
-    async def _get_genre_from_elastic(self, genre_id: str) -> Optional[Genre]:
-        doc = await self.elastic.get(index="genres", id=genre_id, ignore=[404])
-        if doc.get('_source') is None:
+    async def _get_genre_from_db(self, genre_id: str) -> Optional[Genre]:
+        doc = await self.se.get(scope="genres", record_id=genre_id)
+        if doc is None:
             return None
-        return Genre(**doc['_source'])
+        return Genre(**doc)
 
     async def _genre_from_cache(self, key: str) -> Optional[Genre]:
         data = await self.cache_service.read(key)
@@ -83,6 +83,6 @@ class GenreService:
 @lru_cache()
 def get_genre_service(
         cache: BaseCacheStorage = Depends(get_cache),
-        elastic: AsyncElasticsearch = Depends(get_elastic),
+        search_engine: BaseSearchEngine = Depends(get_search_engine),
 ) -> GenreService:
-    return GenreService(cache, elastic)
+    return GenreService(cache, search_engine)
