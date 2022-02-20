@@ -1,4 +1,4 @@
-from db.abstract_cache import BaseCacheStorage
+from core.abstractions import BaseCacheStorage
 from db.redis import RedisCache
 
 cache: BaseCacheStorage = RedisCache()

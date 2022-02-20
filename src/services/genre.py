@@ -4,8 +4,7 @@ from typing import Optional, List, Dict
 import orjson
 from fastapi import Depends
 
-from db.abstract_cache import BaseCacheStorage
-from db.abstract_search_engine import BaseSearchEngine
+from core.abstractions import BaseCacheStorage, BaseSearchEngine
 from db.cache import get_cache
 from db.search_engine import get_search_engine
 from models.genre import Genre

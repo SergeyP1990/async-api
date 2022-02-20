@@ -1,6 +1,8 @@
 from typing import Optional, Any
+
 from aioredis import Redis, create_redis_pool
-from db.abstract_cache import BaseCacheStorage
+from core.abstractions import BaseCacheStorage
+
 from core import config
 
 

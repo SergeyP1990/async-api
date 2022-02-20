@@ -1,4 +1,4 @@
-from db.abstract_search_engine import BaseSearchEngine
+from core.abstractions import BaseSearchEngine
 from db.elastic import AsyncElasticEngine
 
 search_engine: BaseSearchEngine = AsyncElasticEngine()

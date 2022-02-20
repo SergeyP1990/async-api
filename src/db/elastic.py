@@ -1,7 +1,7 @@
 from typing import Optional, List, Any
 from elasticsearch import AsyncElasticsearch
 
-from db.abstract_search_engine import BaseSearchEngine
+from core.abstractions import BaseSearchEngine
 from core import config
 
 

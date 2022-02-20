@@ -4,8 +4,7 @@ from typing import Optional, List, Dict
 from fastapi import Depends
 from orjson import loads as orjson_loads
 
-from db.abstract_cache import BaseCacheStorage
-from db.abstract_search_engine import BaseSearchEngine
+from core.abstractions import BaseCacheStorage, BaseSearchEngine
 from db.cache import get_cache
 from db.search_engine import get_search_engine
 from models.base import orjson_dumps
