@@ -4,7 +4,7 @@ from typing import Optional, List, Dict
 import orjson
 from fastapi import Depends
 
-from core.abstractions import BaseCacheStorage, BaseSearchEngine
+from core.abstractions import BaseCacheStorage, BaseSearchEngine, DetailViewWithCache, ListViewWithCache
 from db.cache import get_cache
 from db.search_engine import get_search_engine
 from models.genre import Genre
@@ -13,10 +13,10 @@ from services.cache_key_generator import generate_key
 GENRE_CACHE_EXPIRE_IN_SECONDS = 60 * 5  # 5 минут
 
 
-class GenreService:
-    def __init__(self, cache: BaseCacheStorage, se: BaseSearchEngine):
-        self.cache_service = cache
-        self.se = se
+class GenreService(DetailViewWithCache, ListViewWithCache):
+    # def __init__(self, cache: BaseCacheStorage, se: BaseSearchEngine):
+    #     self.cache_service = cache
+    #     self.se = se
 
     async def get_genres(self) -> List[Genre]:
         body = {
@@ -28,22 +28,29 @@ class GenreService:
             "method": "all_genres",
         }
         key = generate_key("genres", params)
-        genres = await self._genres_from_cache(key)
-        if not genres:
-            genres = await self._get_genres_from_db(body)
-            await self._put_genres_to_cache(key, genres)
-        return genres
+        return await self.search_data(body, Genre, key=key)
 
-    async def get_by_id(self, genre_id: str) -> Optional[Genre]:
+        # body = {
+        #     "query": {
+        #         "match_all": {},
+        #     }
+        # }
+        # params = {
+        #     "method": "all_genres",
+        # }
+        # key = generate_key("genres", params)
+        # genres = await self._genres_from_cache(key)
+        # if not genres:
+        #     genres = await self._get_genres_from_db(body)
+        #     await self._put_genres_to_cache(key, genres)
+        # return genres
+        #
+        #
+
+    async def get_genre_by_id(self, genre_id: str) -> Optional[Genre]:
+        # pass
         key = generate_key("genres", {"by_id": genre_id})
-        genre = await self._genre_from_cache(key)
-        if not genre:
-            genre = await self._get_genre_from_db(genre_id)
-            if not genre:
-                return None
-            await self._put_genre_to_cache(key, genre)
-
-        return genre
+        return await self.get_by_id(genre_id, Genre, key=key)
 
     # Функция возвращает список жанров по переданному body
     async def _get_genres_from_db(self, body: Dict) -> List[Genre]:
@@ -84,4 +91,4 @@ def get_genre_service(
         cache: BaseCacheStorage = Depends(get_cache),
         search_engine: BaseSearchEngine = Depends(get_search_engine),
 ) -> GenreService:
-    return GenreService(cache, search_engine)
+    return GenreService(search_engine, cache)
