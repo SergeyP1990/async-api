@@ -4,7 +4,6 @@ from pydantic import BaseModel
 
 
 def orjson_dumps(v, *, default):
-    print("======== JSON DUMPS CALL ==========")
     return orjson.dumps(v, default=default).decode()
 
 

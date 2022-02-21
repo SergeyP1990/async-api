@@ -1,5 +1,5 @@
 from functools import lru_cache
-from typing import Optional, List, Dict
+from typing import Optional, List
 
 from fastapi import Depends
 
@@ -36,4 +36,4 @@ def get_genre_service(
         cache: BaseCacheStorage = Depends(get_cache),
         search_engine: BaseSearchEngine = Depends(get_search_engine),
 ) -> GenreService:
-    return GenreService(search_engine, cache)
+    return GenreService(search_engine, cache, expire=GENRE_CACHE_EXPIRE_IN_SECONDS)
