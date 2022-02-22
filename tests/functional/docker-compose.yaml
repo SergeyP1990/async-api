@@ -1,6 +1,19 @@
 services:
-  db:
-    build: ./docker/postgres
+
+  tests:
+    build:
+      context: .
+    entrypoint: >
+      sh -c "python3 /usr/src/tests/utils/wait_for_es.py
+      && python3 /usr/src/tests/utils/wait_for_redis.py
+      && pytest /usr/src/tests/src -v"
+    env_file:
+      - .env
+    restart: on-failure
+    networks:
+      - test_net
+
+  db-tests:
     image: postgres-image
     expose:
       - 5432
@@ -9,34 +22,33 @@ services:
     env_file:
       - .env
     networks:
-      - movie-api_net
+      - test_net
 
-  nginx:
+  nginx-tests:
     image: nginx:1.21.6
     volumes:
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./docker/nginx/configs:/etc/nginx/conf.d:ro
     depends_on:
-      - fast-api
+      - fast-api-tests
     ports:
       - 80:80
     networks:
-      - movie-api_net
+      - test_net
 
-  fast-api:
-    build: ./src
+  fast-api-tests:
     image: fastapi-image
     expose:
       - 8000
     env_file:
       - .env
     depends_on:
-      - db
+      - db-tests
     restart: on-failure
     networks:
-      - movie-api_net
+      - test_net
 
-  es:
+  es-tests:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.9.1
     expose:
       - 9200
@@ -45,40 +57,38 @@ services:
       - bootstrap.memory_lock=true
     restart: on-failure
     volumes:
-      - es_data:/usr/share/elasticsearch/data
+      - test_es_data:/usr/share/elasticsearch/data
     networks:
-      - movie-api_net
+      - test_net
 
-  redis:
+  redis-tests:
     restart: unless-stopped
     expose:
       - 6379
     image: redis:6.2.5
     volumes:
-      - redis_data:/data
+      - test_redis_data:/data
     networks:
-      - movie-api_net
+      - test_net
 
-  etl:
-    build: ./docker/etl
+  etl-tests:
     image: etl-image
     env_file:
       - .env
     depends_on:
-      - db
-      - es
+      - db-tests
+      - es-tests
     networks:
-      - movie-api_net
+      - test_net
 
 networks:
-    movie-api_net:
-        name: movie-api_net
+    test_net:
+        name: test_net
         driver: bridge
 
 volumes:
   postgres_data:
     name: postgres_data
-  es_data:
-    name: es_data
-  redis_data:
-    name: redis_data
+    external: true
+  test_es_data:
+  test_redis_data:
