@@ -55,55 +55,52 @@ async def test_get_film_data_by_id_1(make_get_request):
 
 
 @pytest.mark.asyncio
-async def test_get_film_data_by_id_2(make_get_request):
-    response = await make_get_request('film/fc23ea9c-e799-419a-9df0-fc9d9b941a12')
+async def test_get_film_data_by_id_2_null_imdb_rating(make_get_request):
+    response = await make_get_request('film/e7e6d147-cc10-406c-a7a2-5e0be2231327')
     assert response.status == 200
     assert len(response.body) == 8
-    assert response.body['uuid'] == 'fc23ea9c-e799-419a-9df0-fc9d9b941a12'
-    assert response.body['title'] == 'Star Troopers'
-    assert response.body['imdb_rating'] == 4.7
-    assert response.body['description'] == 'In the closing stages of the' \
-                                           ' 21st Century, an enigmatic' \
-                                           ' warrior, called the Baron,' \
-                                           ' leads the crusade that the' \
-                                           ' religious organization Exorcio' \
-                                           ' Deus Machine is conducting' \
-                                           ' against the forces of Evil.' \
-                                           ' During an extermination mission,' \
-                                           ' the Baron is taken prisoner' \
-                                           ' by the evil sorceress Lady' \
-                                           ' Pervertvm and is tortured' \
-                                           ' until she gets his seed.' \
-                                           ' Lady Pervertvm uses the' \
-                                           ' Baron\'s seminal fluid to' \
-                                           ' fertilize the Beast-Ragnarok' \
-                                           ' in order to have it engender' \
-                                           ' the most powerful and ultimate' \
-                                           ' race of demons. The Baron manages' \
-                                           ' to escape but, blinded by his' \
-                                           ' guilt, he begins a bloody Via ' \
-                                           'Crucis which will start to reveal' \
-                                           ' his true nature.'
-    assert len(response.body['genre']) == 3
+    assert response.body['uuid'] == 'e7e6d147-cc10-406c-a7a2-5e0be2231327'
+    assert response.body['title'] == 'Shooting Star'
+    assert response.body['imdb_rating'] == None
+    assert response.body['description'] == 'How far would a mother go' \
+                                           ' to protect her children?'
+    assert len(response.body['genre']) == 2
     assert response.body['genre'][0] == {
-        "name": "Action",
-        "uuid": "3d8d9bf5-0d90-4353-88ba-4ccc5d2c07ff"
+        "name": "Drama",
+        "uuid": "1cacff68-643e-4ddd-8f57-84b62538081a"
     }
     assert response.body['genre'][1] == {
-        "name": "Adventure",
-        "uuid": "120a21cf-9097-479e-904a-13dd7198c1dd"
-    }
-    assert response.body['genre'][2] == {
-        "name": "Fantasy",
-        "uuid": "b92ef010-5e4c-4fd0-99d6-41b6456272cd"
+        "name": "Short",
+        "uuid": "a886d0ec-c3f3-4b16-b973-dedcf5bfa395"
     }
     assert len(response.body['actors']) == 4
-    assert len(response.body['writers']) == 1
+    assert len(response.body['writers']) == 2
     assert response.body['writers'][0] == {
-        "uuid": "9672c2ca-c113-4b3c-8a34-31edf0398a88",
-        "full_name": "Ricardo Ribelles"
+        "uuid": "178c9768-6d04-4419-8afc-83d8228421ef",
+        "full_name": "Yassen Genadiev"
     }
-    assert response.body['directors'][0]['full_name'] == "Ricardo Ribelles"
+    assert response.body['writers'][1] == {
+        "uuid": "1b8773c9-7e15-4809-a6d7-949c9b9def3b",
+        "full_name": "Lyubo Yonchev"
+    }
+    assert response.body['directors'][0]['full_name'] == "Lyubo Yonchev"
+
+
+@pytest.mark.asyncio
+async def test_get_film_data_by_id_3_null_actors_writers_directors(make_get_request):
+    response = await make_get_request('film/fd78a0e5-d4ec-435e-8994-4ccbdfc4e60b')
+    assert response.status == 200
+    assert len(response.body) == 8
+    assert response.body['uuid'] == 'fd78a0e5-d4ec-435e-8994-4ccbdfc4e60b'
+    assert response.body['title'] == 'Lone Star Restoration'
+    assert response.body['imdb_rating'] == 8.7
+    assert response.body['genre'][0] == {
+      "name": "Reality-TV",
+      "uuid": "e508c1c8-24c0-4136-80b4-340c4befb190"
+    }
+    assert response.body['actors'] == None
+    assert response.body['writers'] == None
+    assert response.body['directors'] == None
 
 
 @pytest.mark.asyncio

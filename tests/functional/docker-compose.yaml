@@ -89,5 +89,6 @@ networks:
 volumes:
   postgres_data:
     name: postgres_data
+    external: true
   test_es_data:
   test_redis_data:
