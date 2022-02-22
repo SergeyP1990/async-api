@@ -1,11 +1,10 @@
-import aioredis
-from elasticsearch import AsyncElasticsearch
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
 from api.v1 import film, genre, person
 from core import config
-from db import elastic, redis
+from db.search_engine import search_engine
+from db.cache import cache
 
 app = FastAPI(
     # Конфигурируем название проекта. Оно будет отображаться в документации
@@ -27,19 +26,20 @@ async def startup():
     # Подключаемся к базам при старте сервера
     # Подключиться можем при работающем event-loop
     # Поэтому логика подключения происходит в асинхронной функции
-    redis.redis = await aioredis.create_redis_pool((config.REDIS_HOST, config.REDIS_PORT), minsize=10, maxsize=20)
-    elastic.es = AsyncElasticsearch(hosts=[f'{config.ELASTIC_HOST}:{config.ELASTIC_PORT}'])
+    await cache.connect()
+    await search_engine.connect()
 
 
 @app.on_event('shutdown')
 async def shutdown():
     # Отключаемся от баз при выключении сервера
-    await redis.redis.close()
-    await elastic.es.close()
+    await cache.close()
+    await search_engine.close()
 
 
 # Подключаем роутер к серверу, указав префикс /v1/film
 # Теги указываем для удобства навигации по документации
+
 app.include_router(film.router, prefix='/api/v1/film')
 app.include_router(genre.router, prefix='/api/v1/genre')
 app.include_router(person.router, prefix='/api/v1/person')

@@ -1,5 +1,5 @@
 import orjson
-
+from typing import ClassVar
 from pydantic import BaseModel
 
 
@@ -8,6 +8,8 @@ def orjson_dumps(v, *, default):
 
 
 class BaseOrjsonModel(BaseModel):
+    table_name: ClassVar[str] = ""
+
     class Config:
         # Заменяем стандартную работу с json на более быструю
         json_loads = orjson.loads
