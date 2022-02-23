@@ -16,6 +16,7 @@ class GenreService(BaseService):
 
     async def get_genres(self) -> List[Genre]:
         body = {
+            "size": 50,
             "query": {
                 "match_all": {},
             }
