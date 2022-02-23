@@ -24,10 +24,25 @@ class FilmService(BaseService):
             'size': page_size,
             'from': (page_number - 1) * page_size,
             'query': {
-                'simple_query_string': {
-                    "query": query,
-                    "fields": ["title^3", "description"],
-                    "default_operator": "or"
+                "bool": {
+                    "should": [
+                        {
+                            "match": {
+                                "title": {
+                                    "query": query,
+                                    "fuzziness": "auto"
+                                }
+                            }
+                        },
+                        {
+                            "match": {
+                                "description": {
+                                    "query": query,
+                                    "fuzziness": "auto"
+                                }
+                            }
+                        }
+                    ]
                 }
             }
         }
