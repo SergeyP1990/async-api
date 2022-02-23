@@ -2,13 +2,8 @@ services:
 
   tests:
     build: ./docker/tests
-    entrypoint: >
-      sh -c "python3 /usr/src/tests/utils/wait_for_es.py
-      && python3 /usr/src/tests/utils/wait_for_redis.py
-      && pytest /usr/src/tests/src -v"
     env_file:
       - .env
-    restart: on-failure
     networks:
       - test_net
 

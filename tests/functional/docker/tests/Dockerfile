@@ -15,4 +15,8 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt --no-cache-dir
 
 # copy project
-COPY .. .
+COPY . .
+
+
+ENTRYPOINT ["sh", "-c", "python3 main.py \
+      && pytest /usr/src/tests/src -v"]
