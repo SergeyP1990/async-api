@@ -18,6 +18,26 @@
   ```
 После успешного запуска потестировать API можно по адресу http://localhost/api/openapi
 
+### Задания
+Задание из спринта соответствует _issue_, решение соответствует _pull request_, указанному в соответствующем issue.
+
+Задания 5 спринта:
+
+1) [Задание на ревью](https://github.com/SergeyP1990/async-api/issues/31) (в комментах к этому issue есть ссылки на issue с ревью)
+2) [SOLID. Elastic Search](https://github.com/SergeyP1990/async-api/issues/32)
+3) [SOLID. Redis](https://github.com/SergeyP1990/async-api/issues/33)
+4) [SOLID. Views](https://github.com/SergeyP1990/async-api/issues/34)
+5) [Функциональны тесты. Инф-ра](https://github.com/SergeyP1990/async-api/issues/35)
+6) [Функциональны тесты. film](https://github.com/SergeyP1990/async-api/issues/36)
+7) [Функциональны тесты. person](https://github.com/SergeyP1990/async-api/issues/37)
+8) [Функциональны тесты. genre](https://github.com/SergeyP1990/async-api/issues/38)
+9) [Функциональны тесты. search](https://github.com/SergeyP1990/async-api/issues/39)
+10) [(Опицонально) OpenAPI документация](https://github.com/SergeyP1990/async-api/issues/40)
+11) [(Опицонально) Exponential backoff](https://github.com/SergeyP1990/async-api/issues/41) (не выполнено)
+
+
+
+
 <details>
   <summary>Дефолтное сообщение из репы спринта</summary>
   # Проектная работа 4 спринта
