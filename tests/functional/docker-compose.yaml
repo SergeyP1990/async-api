@@ -1,8 +1,7 @@
 services:
 
   tests:
-    build:
-      context: .
+    build: ./docker/tests
     entrypoint: >
       sh -c "python3 /usr/src/tests/utils/wait_for_es.py
       && python3 /usr/src/tests/utils/wait_for_redis.py
