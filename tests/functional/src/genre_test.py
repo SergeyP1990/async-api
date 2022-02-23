@@ -5,9 +5,9 @@ import pytest
 async def test_get_genre_data_default(make_get_request):
     response = await make_get_request('genre/')
     assert response.status == 200
-    assert len(response.body) == 50
+    assert len(response.body) == 26
     assert response.body[0]['name'] == 'Action'
-    assert response.body[49]['name'] == 'News'
+    assert response.body[25]['name'] == 'News'
 
 
 @pytest.mark.asyncio
