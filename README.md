@@ -33,7 +33,7 @@
 8) [Функциональны тесты. genre](https://github.com/SergeyP1990/async-api/issues/38)
 9) [Функциональны тесты. search](https://github.com/SergeyP1990/async-api/issues/39)
 10) [(Опицонально) OpenAPI документация](https://github.com/SergeyP1990/async-api/issues/40)
-11) [(Опицонально) Exponential backoff](https://github.com/SergeyP1990/async-api/issues/41) (не выполнено)
+11) [(Опицонально) Exponential backoff](https://github.com/SergeyP1990/async-api/issues/41)
 
 
 
