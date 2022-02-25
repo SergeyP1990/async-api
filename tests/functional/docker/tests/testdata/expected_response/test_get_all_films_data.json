@@ -1,0 +1,502 @@
+[
+  {
+    "uuid": "2a090dde-f688-46fe-a9f4-b781a985275e",
+    "title": "Star Wars: Knights of the Old Republic",
+    "imdb_rating": 9.6
+  },
+  {
+    "uuid": "40f515ab-e69e-481c-aac3-ebf3b3833253",
+    "title": "Star Wars: Knights of the Old Republic II - The Sith Lords",
+    "imdb_rating": 8.9
+  },
+  {
+    "uuid": "f061235e-779f-4a59-9eaa-fc533c3c0584",
+    "title": "Star Wars: Battlefront II",
+    "imdb_rating": 8.8
+  },
+  {
+    "uuid": "e5a21648-59b1-4672-ac3b-867bcd64b6ea",
+    "title": "Star Wars Jedi: Fallen Order",
+    "imdb_rating": 8.8
+  },
+  {
+    "uuid": "0312ed51-8833-413f-bff5-0e139c11264a",
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "imdb_rating": 8.7
+  },
+  {
+    "uuid": "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+    "title": "Star Wars: Episode IV - A New Hope",
+    "imdb_rating": 8.6
+  },
+  {
+    "uuid": "b1384a92-f7fe-476b-b90b-6cec2b7a0dce",
+    "title": "Star Trek: The Next Generation",
+    "imdb_rating": 8.6
+  },
+  {
+    "uuid": "0bb10475-0043-4f98-804f-986433d6f7ac",
+    "title": "Star Wars: Battlefront",
+    "imdb_rating": 8.4
+  },
+  {
+    "uuid": "9f9393d3-c54e-4e4f-bab0-272a7f80de9e",
+    "title": "Saber Rider and the Star Sheriffs",
+    "imdb_rating": 8.4
+  },
+  {
+    "uuid": "025c58cd-1b7e-43be-9ffb-8571a613579b",
+    "title": "Star Wars: Episode VI - Return of the Jedi",
+    "imdb_rating": 8.3
+  },
+  {
+    "uuid": "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e",
+    "title": "Star Trek: The Original Series",
+    "imdb_rating": 8.3
+  },
+  {
+    "uuid": "5a5603b2-afb5-42f5-8235-bb75b2cd9edd",
+    "title": "My Love from Another Star",
+    "imdb_rating": 8.3
+  },
+  {
+    "uuid": "dc2dbf5d-de5d-4153-a049-51ba44f15e04",
+    "title": "Empire of Dreams: The Story of the 'Star Wars' Trilogy",
+    "imdb_rating": 8.3
+  },
+  {
+    "uuid": "4547b202-5f72-4c5e-ae79-9c46f3f95037",
+    "title": "Fist of the North Star",
+    "imdb_rating": 8.3
+  },
+  {
+    "uuid": "b503ced6-fff1-493a-ad41-73449b55ffee",
+    "title": "Star Wars: The Clone Wars",
+    "imdb_rating": 8.2
+  },
+  {
+    "uuid": "3cb639db-cd8a-48b0-90e3-9def109a4492",
+    "title": "Star Wars: The Force Unleashed",
+    "imdb_rating": 8.2
+  },
+  {
+    "uuid": "d77e45fc-2b84-442f-b652-caf31cb07c80",
+    "title": "Robot Chicken: Star Wars",
+    "imdb_rating": 8.1
+  },
+  {
+    "uuid": "d1099968-805e-4a2b-a2ec-18bbde1201ac",
+    "title": "Robot Chicken: Star Wars Episode II",
+    "imdb_rating": 8.1
+  },
+  {
+    "uuid": "830857b7-64d2-4a95-98c4-b03351daff52",
+    "title": "Robot Chicken: Star Wars III",
+    "imdb_rating": 8.1
+  },
+  {
+    "uuid": "a9d52337-3249-49ae-92b8-65ee9ebaf359",
+    "title": "Star Wars Rebels",
+    "imdb_rating": 8
+  },
+  {
+    "uuid": "ea434935-cb62-4012-9138-be74435890cd",
+    "title": "Star vs. the Forces of Evil",
+    "imdb_rating": 8
+  },
+  {
+    "uuid": "9b3c278c-665f-4055-a824-891f19cb4993",
+    "title": "Star Trek Continues",
+    "imdb_rating": 8
+  },
+  {
+    "uuid": "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+    "title": "Star Wars: Episode VII - The Force Awakens",
+    "imdb_rating": 7.9
+  },
+  {
+    "uuid": "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+    "title": "Star Trek",
+    "imdb_rating": 7.9
+  },
+  {
+    "uuid": "a144d250-6667-47e4-94bd-0ee59c0dc05f",
+    "title": "Star Trek: Deep Space Nine",
+    "imdb_rating": 7.9
+  },
+  {
+    "uuid": "acaa9ff8-b261-4ff4-b194-a99fd7669542",
+    "title": "Outlaw Star",
+    "imdb_rating": 7.9
+  },
+  {
+    "uuid": "6fddb231-8127-42f0-81e5-f53a806c2ae8",
+    "title": "The Cloud-Capped Star",
+    "imdb_rating": 7.9
+  },
+  {
+    "uuid": "118fd71b-93cd-4de5-95a4-e1485edad30e",
+    "title": "Rogue One: A Star Wars Story",
+    "imdb_rating": 7.8
+  },
+  {
+    "uuid": "de5347cf-a70d-430f-8005-786326e28794",
+    "title": "Star Trek: Voyager",
+    "imdb_rating": 7.8
+  },
+  {
+    "uuid": "fdfc8266-5ece-4d85-b614-3cfe9be97b71",
+    "title": "Star Wars: Clone Wars",
+    "imdb_rating": 7.8
+  },
+  {
+    "uuid": "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+    "title": "Star Trek Into Darkness",
+    "imdb_rating": 7.7
+  },
+  {
+    "uuid": "fda827f8-d261-4c23-9e9c-e42787580c4d",
+    "title": "A Star Is Born",
+    "imdb_rating": 7.7
+  },
+  {
+    "uuid": "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e",
+    "title": "Star Trek II: The Wrath of Khan",
+    "imdb_rating": 7.7
+  },
+  {
+    "uuid": "cc397479-a5f8-488f-bd7f-7fbb94ec6e18",
+    "title": "Star Trek: Picard",
+    "imdb_rating": 7.7
+  },
+  {
+    "uuid": "1eb9cc6b-879f-4160-8971-918ecbe47a87",
+    "title": "Star",
+    "imdb_rating": 7.7
+  },
+  {
+    "uuid": "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+    "title": "Star Trek: First Contact",
+    "imdb_rating": 7.6
+  },
+  {
+    "uuid": "ddbc2fc3-389e-419f-a8fa-59e6cee10802",
+    "title": "A Star Is Born",
+    "imdb_rating": 7.6
+  },
+  {
+    "uuid": "516f91da-bd70-4351-ba6d-25e16b7713b7",
+    "title": "Star Wars: Episode III - Revenge of the Sith",
+    "imdb_rating": 7.5
+  },
+  {
+    "uuid": "47050db6-580f-493c-a007-a11c8768ce1b",
+    "title": "Star Trek: Enterprise",
+    "imdb_rating": 7.5
+  },
+  {
+    "uuid": "e2db51c4-096c-44fd-bdf7-cbaa4052d808",
+    "title": "Third Star",
+    "imdb_rating": 7.5
+  },
+  {
+    "uuid": "db5dcded-29da-4c96-91a2-df1407f0a80a",
+    "title": "Star Trek: The Animated Series",
+    "imdb_rating": 7.5
+  },
+  {
+    "uuid": "bfe61bd9-5dfd-41ca-80ae-8eca998bc29d",
+    "title": "Lone Star",
+    "imdb_rating": 7.4
+  },
+  {
+    "uuid": "7159c8c2-b9a4-410a-965b-1096b8d1e614",
+    "title": "The Star Maker",
+    "imdb_rating": 7.4
+  },
+  {
+    "uuid": "8a96580a-6b7b-422e-b4fb-694eaa269ff7",
+    "title": "The Tin Star",
+    "imdb_rating": 7.4
+  },
+  {
+    "uuid": "181c2b64-4b8e-45b0-8b2e-ea71a2b34285",
+    "title": "Instant Star",
+    "imdb_rating": 7.4
+  },
+  {
+    "uuid": "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97",
+    "title": "Star Trek: Discovery",
+    "imdb_rating": 7.3
+  },
+  {
+    "uuid": "1b7d7c64-8be8-47db-8924-23029a9878a9",
+    "title": "Star Trek IV: The Voyage Home",
+    "imdb_rating": 7.3
+  },
+  {
+    "uuid": "d38c5a13-860e-478b-a645-e09d5d727244",
+    "title": "Star-Crossed",
+    "imdb_rating": 7.3
+  },
+  {
+    "uuid": "1145f9ee-5344-4e57-81d0-5b085f3d0808",
+    "title": "Tin Star",
+    "imdb_rating": 7.3
+  },
+  {
+    "uuid": "045f2518-5c38-48df-9c48-639520ab57af",
+    "title": "A Star Is Born",
+    "imdb_rating": 7.3
+  },
+  {
+    "uuid": "894b0d4a-291c-4a9d-8d39-8fe856ee237c",
+    "title": "Fist of the North Star",
+    "imdb_rating": 7.3
+  },
+  {
+    "uuid": "511b8ae8-f59d-450e-b9a2-22aabba2693b",
+    "title": "Star Trek VI: The Undiscovered Country",
+    "imdb_rating": 7.2
+  },
+  {
+    "uuid": "c20959d2-daca-4cb2-a104-e1ab63479da3",
+    "title": "Voices of a Distant Star",
+    "imdb_rating": 7.2
+  },
+  {
+    "uuid": "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e",
+    "title": "Star Trek Beyond",
+    "imdb_rating": 7.1
+  },
+  {
+    "uuid": "dcab54f1-6958-4699-b3f5-2fb92c185b33",
+    "title": "Star Wars: The Force Unleashed II",
+    "imdb_rating": 7.1
+  },
+  {
+    "uuid": "2cd808c5-d2ca-4e5d-bbbb-061e9a63aee7",
+    "title": "The Star",
+    "imdb_rating": 7.1
+  },
+  {
+    "uuid": "dd453840-3491-4836-a1c8-61aee8a2d283",
+    "title": "Star Wars: Battlefront",
+    "imdb_rating": 7.1
+  },
+  {
+    "uuid": "12a8279d-d851-4eb9-9d64-d690455277cc",
+    "title": "Star Wars: Episode VIII - The Last Jedi",
+    "imdb_rating": 7
+  },
+  {
+    "uuid": "9c7dc26a-489d-4c08-9bba-6ae9dc8117f1",
+    "title": "All-Star Superman",
+    "imdb_rating": 7
+  },
+  {
+    "uuid": "cc75c41e-c4b4-4544-b70a-2b59f7013744",
+    "title": "Fullmetal Alchemist: The Sacred Star of Milos",
+    "imdb_rating": 7
+  },
+  {
+    "uuid": "e42d300d-d671-4877-aa3f-d7fb1ced52ad",
+    "title": "The Star",
+    "imdb_rating": 7
+  },
+  {
+    "uuid": "57beb3fd-b1c9-4f8a-9c06-2da13f95251c",
+    "title": "Solo: A Star Wars Story",
+    "imdb_rating": 6.9
+  },
+  {
+    "uuid": "319df05f-c5d9-4389-a84a-a43e695bf048",
+    "title": "Bright Star",
+    "imdb_rating": 6.9
+  },
+  {
+    "uuid": "c3c6a2ef-7776-43cb-b57d-7863bc9f7331",
+    "title": "The Last Movie Star",
+    "imdb_rating": 6.9
+  },
+  {
+    "uuid": "8d4f3766-a857-49a3-ae9c-4565a9459a29",
+    "title": "Man Without a Star",
+    "imdb_rating": 6.9
+  },
+  {
+    "uuid": "46f15353-2add-415d-9782-fa9c5b8083d5",
+    "title": "Star Wars: Episode IX - The Rise of Skywalker",
+    "imdb_rating": 6.7
+  },
+  {
+    "uuid": "37c6cd37-1222-4470-9221-3170367d134b",
+    "title": "Star Trek III: The Search for Spock",
+    "imdb_rating": 6.7
+  },
+  {
+    "uuid": "96c5ff26-b615-408a-a144-137664907c48",
+    "title": "Wish Upon a Star",
+    "imdb_rating": 6.7
+  },
+  {
+    "uuid": "78efe505-6ef8-41f7-88ef-15840be2e680",
+    "title": "Star 80",
+    "imdb_rating": 6.7
+  },
+  {
+    "uuid": "a1bf30bf-08ee-4000-8d9a-a1e17ab2c197",
+    "title": "Buzz Lightyear of Star Command",
+    "imdb_rating": 6.7
+  },
+  {
+    "uuid": "98167b6e-8d41-4378-9fc3-ee998677e6cb",
+    "title": "Star Trek: Generations",
+    "imdb_rating": 6.6
+  },
+  {
+    "uuid": "58fd971d-4550-4164-8428-06f9a19f93cc",
+    "title": "Star Wreck: In the Pirkinning",
+    "imdb_rating": 6.6
+  },
+  {
+    "uuid": "68e9a139-976d-4a83-ad1b-e374376814c9",
+    "title": "Star",
+    "imdb_rating": 6.6
+  },
+  {
+    "uuid": "3b914679-1f5e-4cbd-8044-d13d35d5236c",
+    "title": "Star Wars: Episode I - The Phantom Menace",
+    "imdb_rating": 6.5
+  },
+  {
+    "uuid": "c4c5e3de-c0c9-4091-b242-ceb331004dfd",
+    "title": "Star Wars: Episode II - Attack of the Clones",
+    "imdb_rating": 6.5
+  },
+  {
+    "uuid": "80d1bf50-ce62-43a8-b852-6f116ce4f91b",
+    "title": "Flaming Star",
+    "imdb_rating": 6.5
+  },
+  {
+    "uuid": "a7b11817-205f-4e1a-98b5-e3c48b824bc3",
+    "title": "Star Trek",
+    "imdb_rating": 6.4
+  },
+  {
+    "uuid": "50d842be-bcda-401e-90de-b06929611ce0",
+    "title": "Star Trek: Nemesis",
+    "imdb_rating": 6.4
+  },
+  {
+    "uuid": "9d284e83-21f0-4073-aac0-4abee51193d8",
+    "title": "Star Trek: Insurrection",
+    "imdb_rating": 6.4
+  },
+  {
+    "uuid": "496f504e-20fa-4dfd-b4cb-c7c4ef636e07",
+    "title": "Rock Star",
+    "imdb_rating": 6.3
+  },
+  {
+    "uuid": "856bc547-0bae-4de5-8bcc-6d3f9e92d3eb",
+    "title": "Dark Star",
+    "imdb_rating": 6.3
+  },
+  {
+    "uuid": "b74a0e51-293b-4b76-9a96-0f5af7dc2030",
+    "title": "The Star Chamber",
+    "imdb_rating": 6.3
+  },
+  {
+    "uuid": "5c4ed86e-021e-44ef-b899-5db849ed343f",
+    "title": "9-1-1: Lone Star",
+    "imdb_rating": 6.3
+  },
+  {
+    "uuid": "445c5df6-06b4-42a8-83f8-ebbf00a04a5c",
+    "title": "Porn Star: The Legend of Ron Jeremy",
+    "imdb_rating": 6.3
+  },
+  {
+    "uuid": "0352be33-bb3a-455b-80dd-444202dff23d",
+    "title": "A Five Star Life",
+    "imdb_rating": 6.3
+  },
+  {
+    "uuid": "da7941cf-3be4-4f0b-a27e-649f18b4e8e9",
+    "title": "A Star Is Born",
+    "imdb_rating": 6.2
+  },
+  {
+    "uuid": "996262ef-e565-426a-a25e-c6863eff474d",
+    "title": "The Star",
+    "imdb_rating": 6.2
+  },
+  {
+    "uuid": "0236282f-8ea5-418e-ab9b-13662a4688a9",
+    "title": "Buzz Lightyear of Star Command: The Adventure Begins",
+    "imdb_rating": 6.2
+  },
+  {
+    "uuid": "a0451bbf-e64d-4756-8360-e10382f86dc9",
+    "title": "Lone Star State of Mind",
+    "imdb_rating": 6.1
+  },
+  {
+    "uuid": "8cc3c3aa-e531-4eeb-a707-08119024b3ea",
+    "title": "Star Wars: The Clone Wars",
+    "imdb_rating": 5.9
+  },
+  {
+    "uuid": "fbe9f7b7-6e83-4ecb-8ddf-f15a505c07e2",
+    "title": "The Evening Star",
+    "imdb_rating": 5.9
+  },
+  {
+    "uuid": "523f1a55-51fe-4d3c-a58d-30d8a61bb267",
+    "title": "The Sun Is Also a Star",
+    "imdb_rating": 5.8
+  },
+  {
+    "uuid": "82297925-80cc-4c47-b6cf-6b5e06e23b70",
+    "title": "Star Trek V: The Final Frontier",
+    "imdb_rating": 5.5
+  },
+  {
+    "uuid": "192b3fc9-97e2-4260-91c6-a9b91a41e520",
+    "title": "Dickie Roberts: Former Child Star",
+    "imdb_rating": 5.5
+  },
+  {
+    "uuid": "cdd0d1bf-e473-4cfd-bf4a-31e42a5df212",
+    "title": "Star Kid",
+    "imdb_rating": 5.3
+  },
+  {
+    "uuid": "5065b37b-fd5b-4c48-8a24-435198c44830",
+    "title": "Star Wars Resistance",
+    "imdb_rating": 4.9
+  },
+  {
+    "uuid": "77bff1a8-f6e2-4a6c-b555-b5d44c34c0dd",
+    "title": "Star Trek: Renegades",
+    "imdb_rating": 4.9
+  },
+  {
+    "uuid": "bb806d5e-6b07-4350-bb50-b28e94ff38f4",
+    "title": "Fist of the North Star",
+    "imdb_rating": 3.9
+  },
+  {
+    "uuid": "935e418d-09f3-4de4-8ce3-c31f31580b12",
+    "title": "Bucky Larson: Born to Be a Star",
+    "imdb_rating": 3.2
+  },
+  {
+    "uuid": "134989c3-3b20-4ae7-8092-3e8ad2333d59",
+    "title": "The Star Wars Holiday Special",
+    "imdb_rating": 2.1
+  }
+]

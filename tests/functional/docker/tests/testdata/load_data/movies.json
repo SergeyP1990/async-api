@@ -1618,7 +1618,7 @@
       "uuid" : "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e",
       "imdb_rating" : 8.3,
       "title" : "Star Trek: The Original Series",
-      "description" : """The adventures of the USS Enterprise, representing the United Federation of Planets on a five-year mission in outer space to explore new worlds, seek new life and new civilizations, and to boldly go where no one has gone before. The Enterprise is commanded by handsome and brash Captain James T. Kirk. His First Officer and best friend is Mr. Spock from the planet Vulcan, and Kirk's Medical Officer is Dr. Leonard "Bones" McCoy. With a crew of approximately 430, the Enterprise battles aliens, megalomaniacal computers, time paradoxes, psychotic murderers, and even Khan!""",
+      "description" : "The adventures of the USS Enterprise, representing the United Federation of Planets on a five-year mission in outer space to explore new worlds, seek new life and new civilizations, and to boldly go where no one has gone before. The Enterprise is commanded by handsome and brash Captain James T. Kirk. His First Officer and best friend is Mr. Spock from the planet Vulcan, and Kirk's Medical Officer is Dr. Leonard \"Bones\" McCoy. With a crew of approximately 430, the Enterprise battles aliens, megalomaniacal computers, time paradoxes, psychotic murderers, and even Khan!",
       "genre" : [
         {
           "name" : "Action",
@@ -2577,7 +2577,7 @@
       "uuid" : "856bc547-0bae-4de5-8bcc-6d3f9e92d3eb",
       "imdb_rating" : 6.3,
       "title" : "Dark Star",
-      "description" : """Low-budget story of four astronauts in deep space, whose mission is to destroy unstable planets in star systems which are to be colonised. The late Commander Powell is stored in deep freeze, where he is still able to offer advice. As their mission nears completion, they must cope with a runaway alien which resembles a beach-ball, faulty computer systems, and a "smart bomb" who thinks it is God.""",
+      "description" : "Low-budget story of four astronauts in deep space, whose mission is to destroy unstable planets in star systems which are to be colonised. The late Commander Powell is stored in deep freeze, where he is still able to offer advice. As their mission nears completion, they must cope with a runaway alien which resembles a beach-ball, faulty computer systems, and a \"smart bomb\" who thinks it is God.",
       "genre" : [
         {
           "name" : "Comedy",
@@ -2756,7 +2756,7 @@
       "uuid" : "192b3fc9-97e2-4260-91c6-a9b91a41e520",
       "imdb_rating" : 5.5,
       "title" : "Dickie Roberts: Former Child Star",
-      "description" : """Once, he was on top of the world as a popular child actor on TV. Now, he's Hollywood's punchline about everything wrong with people who were famous as children. All Dickie Roberts wants to do is find that one gig that will restore his honor and everyone's love of him, so after learning that Rob Reiner's making an ambitious new movie destined to sweep the Oscars, Dickie's first in line to audition. He walks out having learned he certainly looks the part but can't act it... yet, owing to his very unusual childhood. To research the role, Dickie embarks on a bizarre scheme to live with a suburban family to see how the average American child lives, having them put him up as their "son". But once his gloves are off, Dickie discovers how great it is to be part of a true family, and whether he gets the part or not, his attempt at method acting will certainly change his life forever.""",
+      "description" : "Once, he was on top of the world as a popular child actor on TV. Now, he's Hollywood's punchline about everything wrong with people who were famous as children. All Dickie Roberts wants to do is find that one gig that will restore his honor and everyone's love of him, so after learning that Rob Reiner's making an ambitious new movie destined to sweep the Oscars, Dickie's first in line to audition. He walks out having learned he certainly looks the part but can't act it... yet, owing to his very unusual childhood. To research the role, Dickie embarks on a bizarre scheme to live with a suburban family to see how the average American child lives, having them put him up as their \"son\". But once his gloves are off, Dickie discovers how great it is to be part of a true family, and whether he gets the part or not, his attempt at method acting will certainly change his life forever.",
       "genre" : [
         {
           "name" : "Comedy",
@@ -3149,7 +3149,7 @@
       "uuid" : "da7941cf-3be4-4f0b-a27e-649f18b4e8e9",
       "imdb_rating" : 6.2,
       "title" : "A Star Is Born",
-      "description" : """Talented rock star John Norman Howard has seen his career begin to decline. Too many years of concerts and managers and life on the road have made him cynical and the monotony has taken its toll. Then he meets the innocent, pure and very talented singer Esther Hoffman. As one of his songs in the movie says "I'm gonna take you girl, I'm gonna show you how." And he does. He shows Esther the way to stardom while forsaking his own career. As they fall in love, her success only makes his decline even more apparent.""",
+      "description" : "Talented rock star John Norman Howard has seen his career begin to decline. Too many years of concerts and managers and life on the road have made him cynical and the monotony has taken its toll. Then he meets the innocent, pure and very talented singer Esther Hoffman. As one of his songs in the movie says \"I'm gonna take you girl, I'm gonna show you how.\" And he does. He shows Esther the way to stardom while forsaking his own career. As they fall in love, her success only makes his decline even more apparent.",
       "genre" : [
         {
           "name" : "Drama",
@@ -4626,7 +4626,7 @@
       "uuid" : "830857b7-64d2-4a95-98c4-b03351daff52",
       "imdb_rating" : 8.1,
       "title" : "Robot Chicken: Star Wars III",
-      "description" : """The Emmy Award-winning Robot Chicken returns with its third send-up of the Star Wars universe! In this all-new hour-long special, four very different characters -- Emperor Palpatine, Darth Vader, Boba Fett and Gary the Stormtrooper -- reveal untold stories that weave and interconnect throughout all six Star Wars films! Set phasers to "fun"! Oh wait, that's the wrong franchise.""",
+      "description" : "The Emmy Award-winning Robot Chicken returns with its third send-up of the Star Wars universe! In this all-new hour-long special, four very different characters -- Emperor Palpatine, Darth Vader, Boba Fett and Gary the Stormtrooper -- reveal untold stories that weave and interconnect throughout all six Star Wars films! Set phasers to \"fun\"! Oh wait, that's the wrong franchise.",
       "genre" : [
         {
           "name" : "Animation",
@@ -5568,7 +5568,7 @@
       "uuid" : "80d1bf50-ce62-43a8-b852-6f116ce4f91b",
       "imdb_rating" : 6.5,
       "title" : "Flaming Star",
-      "description" : """West Texas in the years after the Civil War is an uneasy meeting ground of two cultures, one white. The other native American. Elvis portrays Pacer Burton. The son of a white rancher (John McIntire) and his beautiful Kiowa Indian wife (Dolores DelRio). When fighting breaks out between the settlers and natives, Pacer tries to act as a peace maker, but the "flaming star of death" pulls him irrevocably into the deadly violence.""",
+      "description" : "West Texas in the years after the Civil War is an uneasy meeting ground of two cultures, one white. The other native American. Elvis portrays Pacer Burton. The son of a white rancher (John McIntire) and his beautiful Kiowa Indian wife (Dolores DelRio). When fighting breaks out between the settlers and natives, Pacer tries to act as a peace maker, but the \"flaming star of death\" pulls him irrevocably into the deadly violence.",
       "genre" : [
         {
           "name" : "Western",
@@ -5804,7 +5804,7 @@
       "uuid" : "a1bf30bf-08ee-4000-8d9a-a1e17ab2c197",
       "imdb_rating" : 6.7,
       "title" : "Buzz Lightyear of Star Command",
-      "description" : """The further (animated) adventures of Buzz Lightyear of "Toy Story" and "Toy Story 2." Buzz, along with fellow Star Command Rangers Mira Nova, Booster, and XR, fight to keep the universe safe from the evil clutches of Emperor Zurg and his henchman, Warp Darkmatter.""",
+      "description" : "The further (animated) adventures of Buzz Lightyear of \"Toy Story\" and \"Toy Story 2.\" Buzz, along with fellow Star Command Rangers Mira Nova, Booster, and XR, fight to keep the universe safe from the evil clutches of Emperor Zurg and his henchman, Warp Darkmatter.",
       "genre" : [
         {
           "name" : "Action",
@@ -5968,7 +5968,7 @@
       "uuid" : "9b3c278c-665f-4055-a824-891f19cb4993",
       "imdb_rating" : 8.0,
       "title" : "Star Trek Continues",
-      "description" : """The USS Enterprise's historic five-year mission continues with all new episodes of the original series. "Star Trek: Continues", a new Trek series, beams down with exciting adventures of the Federation's most heroic crew led by Captain James T. Kirk. The lighting and color of the highly accurate sets accentuate the equally detailed props and costumes, matching the original series that ran from 1966-69! With acting and stories that also replicate the original series, the adventures are sure to dazzle even the most die hard Trek fans. Witness now the untold morality plays that explore the final frontier and more importantly... the human condition. Fans of the original series will especially enjoy the pilot episode as a familiar guest star from the original series reprises his role in a sequel entitled "Pilgrim of Eternity".""",
+      "description" : "The USS Enterprise's historic five-year mission continues with all new episodes of the original series. \"Star Trek: Continues\", a new Trek series, beams down with exciting adventures of the Federation's most heroic crew led by Captain James T. Kirk. The lighting and color of the highly accurate sets accentuate the equally detailed props and costumes, matching the original series that ran from 1966-69! With acting and stories that also replicate the original series, the adventures are sure to dazzle even the most die hard Trek fans. Witness now the untold morality plays that explore the final frontier and more importantly... the human condition. Fans of the original series will especially enjoy the pilot episode as a familiar guest star from the original series reprises his role in a sequel entitled \"Pilgrim of Eternity\".",
       "genre" : [
         {
           "name" : "Action",
@@ -6236,7 +6236,7 @@
       "uuid" : "2cd808c5-d2ca-4e5d-bbbb-061e9a63aee7",
       "imdb_rating" : 7.1,
       "title" : "The Star",
-      "description" : """The film is based on the eponymous book by Emmanuil Kazakevich. In the summer of 1944 the Nazi Armies prepare a massive Tank Division named 'Viking" for the offensive on occupied Russian land. The Russian Army's special group of seven snipers named "Zvezda" is sent for a reconnaissance operation behind the enemy lines in the back of the Nazi Tank Division. Two previous Russian groups never came back. The seven Russians know that they are going to an almost certain Death for the sake of Victory.""",
+      "description" : "The film is based on the eponymous book by Emmanuil Kazakevich. In the summer of 1944 the Nazi Armies prepare a massive Tank Division named 'Viking\" for the offensive on occupied Russian land. The Russian Army's special group of seven snipers named \"Zvezda\" is sent for a reconnaissance operation behind the enemy lines in the back of the Nazi Tank Division. Two previous Russian groups never came back. The seven Russians know that they are going to an almost certain Death for the sake of Victory.",
       "genre" : [
         {
           "name" : "Action",

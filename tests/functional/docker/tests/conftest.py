@@ -2,6 +2,7 @@ import aiohttp
 import pytest
 import sys
 import asyncio
+import aiofiles
 import json
 from elasticsearch import AsyncElasticsearch
 from elasticsearch.helpers import async_bulk
@@ -81,7 +82,16 @@ async def initialize_es_index(es_client, index_name):
     await load_data_in_index(es_client, index_name)
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="session", autouse=True)
 async def load_data(es_client):
     for index in settings.test_settings.es_indexes:
         await initialize_es_index(es_client, index)
+
+
+@pytest.fixture(scope="function")
+async def expected_json_response(request):
+    file = test_settings.expected_response_path.joinpath(f"{request.node.name}.json")
+    async with aiofiles.open(file) as f:
+        content = await f.read()
+        response = json.loads(content)
+    return response

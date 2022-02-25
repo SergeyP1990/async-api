@@ -15,7 +15,7 @@ class HTTPResponse:
 class TestSettings(BaseSettings):
     es_host: str = Field(os.getenv('ELASTIC_HOST'))
     es_port: str = Field(os.getenv('ELASTIC_PORT'))
-
+    es_indexes: tuple = Field(('movies', 'genres', 'persons'))
     redis_host: str = Field(os.getenv('REDIS_HOST'))
     redis_port: str = Field(os.getenv('REDIS_PORT'))
 
@@ -23,9 +23,9 @@ class TestSettings(BaseSettings):
     service_url: str = Field(os.getenv('SERVICE_URL'))
     api_version: int = Field(os.getenv('API_VERSION'))
 
-    expected_response_path: Path = Field("tests/functional/testdata/expected_response")
-    index_path: Path = Field("tests/functional/testdata/index")
-    load_data_path: Path = Field("tests/functional/testdata/load_data")
+    expected_response_path: Path = Field("testdata/expected_response")
+    index_path: Path = Field("testdata/index")
+    load_data_path: Path = Field("testdata/load_data")
 
 
 test_settings = TestSettings()
