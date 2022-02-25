@@ -11,6 +11,8 @@ class AsyncElasticEngine(BaseSearchEngine):
 
     async def connect(self) -> None:
         self.search_engine = AsyncElasticsearch(hosts=[f'{config.ELASTIC_HOST}:{config.ELASTIC_PORT}'])
+        if not await self.search_engine.ping():
+            raise ValueError(f"Error connecting to {config.ELASTIC_HOST}:{config.ELASTIC_PORT}")
 
     async def close(self) -> None:
         await self.search_engine.close()

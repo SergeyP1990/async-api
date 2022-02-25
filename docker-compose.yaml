@@ -32,7 +32,6 @@ services:
       - .env
     depends_on:
       - db
-    restart: on-failure
     networks:
       - movie-api_net
 

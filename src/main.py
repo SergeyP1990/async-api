@@ -1,5 +1,7 @@
+import backoff
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
+from socket import gaierror
 
 from api.v1 import film, genre, person
 from core import config
@@ -22,6 +24,7 @@ app = FastAPI(
 
 
 @app.on_event('startup')
+@backoff.on_exception(backoff.expo, (ValueError, gaierror), max_time=25)
 async def startup():
     # Подключаемся к базам при старте сервера
     # Подключиться можем при работающем event-loop
