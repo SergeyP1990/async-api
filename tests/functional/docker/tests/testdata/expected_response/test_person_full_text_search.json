@@ -1,0 +1,15 @@
+[
+  {
+    "uuid": "09ea7635-dfee-4722-ad40-23c93ef03644",
+    "full_name": "David Carson",
+    "role": [
+      {
+        "role": "director",
+        "uuid": "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+      }
+    ],
+    "film_ids": [
+      "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+    ]
+  }
+]

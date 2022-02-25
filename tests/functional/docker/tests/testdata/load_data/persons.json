@@ -1,0 +1,3623 @@
+[
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "a5a8f573-3cee-4ccc-8a2b-91cb9f55250a",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "a5a8f573-3cee-4ccc-8a2b-91cb9f55250a",
+          "full_name" : "George Lucas",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "19babc93-62f5-481a-b6fe-9ebfef689cbc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3a28f10a-433e-431c-8e7b-cc3f90af5a41"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3b1d0e70-42e5-4c9b-98cf-2681c420a99b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3ba6c11a-0db6-4144-bc9d-c7e04b817dd2"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "943946ed-4a2b-4c71-8e0b-a58a11bd1323"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dc2dbf5d-de5d-4153-a049-51ba44f15e04"
+            },
+            {
+              "role" : "director",
+              "uuid" : "3b914679-1f5e-4cbd-8044-d13d35d5236c"
+            },
+            {
+              "role" : "director",
+              "uuid" : "3d825f60-9fff-4dfe-b294-1a45fa1e115d"
+            },
+            {
+              "role" : "director",
+              "uuid" : "516f91da-bd70-4351-ba6d-25e16b7713b7"
+            },
+            {
+              "role" : "director",
+              "uuid" : "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+            },
+            {
+              "role" : "director",
+              "uuid" : "f241a62c-2157-432a-bbeb-9c579c8bc18b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "025c58cd-1b7e-43be-9ffb-8571a613579b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "0659e0e6-504e-4482-8aa9-f7530f36cae2"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "07f8bdbe-5246-4dfc-8d38-85043aeb307b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "12a8279d-d851-4eb9-9d64-d690455277cc"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "134989c3-3b20-4ae7-8092-3e8ad2333d59"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "3b914679-1f5e-4cbd-8044-d13d35d5236c"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "3cb639db-cd8a-48b0-90e3-9def109a4492"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "3d825f60-9fff-4dfe-b294-1a45fa1e115d"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "48495445-f04d-4d4c-9249-1faa28fc64eb"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "4f53452f-a402-4a76-89fd-f034eeb8d657"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "516f91da-bd70-4351-ba6d-25e16b7713b7"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "5c612da0-9c15-48db-b46e-e6c82b071a9b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "5d62b55c-1ed5-4563-ae80-10c4baa21a36"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "6313d0f5-e6a6-4071-a0c2-3d737fd1d56d"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "64aa7000-698f-4332-b52f-9469e4d44ee1"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "6cb927b3-4760-46c8-9002-ff4a47d57a4a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "73ecd1e6-6326-405a-b51b-69008f383b72"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "75609cee-bc87-493d-8c1f-32c7e8ccc368"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "88faa02d-f26f-40a1-9cc6-8045ed08d51e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "92dcddff-a70e-497c-92dc-0da12d1d528a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "983e0b41-dd17-4fd6-b4e7-771f975fdc19"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "991d143e-1342-4f7c-abf0-a9ede3abba20"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "a8f6bd5b-036a-4d79-b952-3c7b5aa3ea83"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "b503ced6-fff1-493a-ad41-73449b55ffee"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "c35dc09c-8ace-46be-8941-7e50b768ec33"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "c8f57f93-b02a-40d4-ba55-9600cceddd7e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "cd19b384-babd-4b0c-ba0a-5c272bcf0238"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "d6a7409f-87cd-49d7-8803-951a7352c2ce"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "daae47e4-cbd0-4ffd-a150-55201b357d5b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "dcab54f1-6958-4699-b3f5-2fb92c185b33"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "e5a21648-59b1-4672-ac3b-867bcd64b6ea"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "e99620fb-11bb-481b-8702-a14efa6bb0ef"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "f241a62c-2157-432a-bbeb-9c579c8bc18b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "f553752e-71c7-4ea0-b780-41408516d0f4"
+            }
+          ],
+          "film_ids" : [
+            "025c58cd-1b7e-43be-9ffb-8571a613579b",
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "0659e0e6-504e-4482-8aa9-f7530f36cae2",
+            "07f8bdbe-5246-4dfc-8d38-85043aeb307b",
+            "118fd71b-93cd-4de5-95a4-e1485edad30e",
+            "12a8279d-d851-4eb9-9d64-d690455277cc",
+            "134989c3-3b20-4ae7-8092-3e8ad2333d59",
+            "19babc93-62f5-481a-b6fe-9ebfef689cbc",
+            "3a28f10a-433e-431c-8e7b-cc3f90af5a41",
+            "3b1d0e70-42e5-4c9b-98cf-2681c420a99b",
+            "3b914679-1f5e-4cbd-8044-d13d35d5236c",
+            "3ba6c11a-0db6-4144-bc9d-c7e04b817dd2",
+            "3cb639db-cd8a-48b0-90e3-9def109a4492",
+            "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+            "46f15353-2add-415d-9782-fa9c5b8083d5",
+            "48495445-f04d-4d4c-9249-1faa28fc64eb",
+            "4f53452f-a402-4a76-89fd-f034eeb8d657",
+            "516f91da-bd70-4351-ba6d-25e16b7713b7",
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c",
+            "5c612da0-9c15-48db-b46e-e6c82b071a9b",
+            "5d62b55c-1ed5-4563-ae80-10c4baa21a36",
+            "6313d0f5-e6a6-4071-a0c2-3d737fd1d56d",
+            "64aa7000-698f-4332-b52f-9469e4d44ee1",
+            "6cb927b3-4760-46c8-9002-ff4a47d57a4a",
+            "73ecd1e6-6326-405a-b51b-69008f383b72",
+            "75609cee-bc87-493d-8c1f-32c7e8ccc368",
+            "88faa02d-f26f-40a1-9cc6-8045ed08d51e",
+            "92dcddff-a70e-497c-92dc-0da12d1d528a",
+            "943946ed-4a2b-4c71-8e0b-a58a11bd1323",
+            "983e0b41-dd17-4fd6-b4e7-771f975fdc19",
+            "991d143e-1342-4f7c-abf0-a9ede3abba20",
+            "a8f6bd5b-036a-4d79-b952-3c7b5aa3ea83",
+            "b503ced6-fff1-493a-ad41-73449b55ffee",
+            "c35dc09c-8ace-46be-8941-7e50b768ec33",
+            "c4c5e3de-c0c9-4091-b242-ceb331004dfd",
+            "c8f57f93-b02a-40d4-ba55-9600cceddd7e",
+            "cd19b384-babd-4b0c-ba0a-5c272bcf0238",
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+            "d6a7409f-87cd-49d7-8803-951a7352c2ce",
+            "daae47e4-cbd0-4ffd-a150-55201b357d5b",
+            "dc2dbf5d-de5d-4153-a049-51ba44f15e04",
+            "dcab54f1-6958-4699-b3f5-2fb92c185b33",
+            "e5a21648-59b1-4672-ac3b-867bcd64b6ea",
+            "e99620fb-11bb-481b-8702-a14efa6bb0ef",
+            "f241a62c-2157-432a-bbeb-9c579c8bc18b",
+            "f553752e-71c7-4ea0-b780-41408516d0f4"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "26e83050-29ef-4163-a99d-b546cac208f8",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "26e83050-29ef-4163-a99d-b546cac208f8",
+          "full_name" : "Mark Hamill",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "025c58cd-1b7e-43be-9ffb-8571a613579b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "12a8279d-d851-4eb9-9d64-d690455277cc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "134989c3-3b20-4ae7-8092-3e8ad2333d59"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3a28f10a-433e-431c-8e7b-cc3f90af5a41"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3b1d0e70-42e5-4c9b-98cf-2681c420a99b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3d825f60-9fff-4dfe-b294-1a45fa1e115d"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "943946ed-4a2b-4c71-8e0b-a58a11bd1323"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b6b8a3b7-1c12-45a8-9da7-4b20db8867df"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "c7bd11a4-30bf-4077-a618-97c3e5525427"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dbb9b244-483b-4592-9194-4938338419bc"
+            },
+            {
+              "role" : "director",
+              "uuid" : "d4b010a5-2648-4850-b15d-307658020923"
+            }
+          ],
+          "film_ids" : [
+            "025c58cd-1b7e-43be-9ffb-8571a613579b",
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "12a8279d-d851-4eb9-9d64-d690455277cc",
+            "134989c3-3b20-4ae7-8092-3e8ad2333d59",
+            "3a28f10a-433e-431c-8e7b-cc3f90af5a41",
+            "3b1d0e70-42e5-4c9b-98cf-2681c420a99b",
+            "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+            "46f15353-2add-415d-9782-fa9c5b8083d5",
+            "943946ed-4a2b-4c71-8e0b-a58a11bd1323",
+            "b6b8a3b7-1c12-45a8-9da7-4b20db8867df",
+            "c7bd11a4-30bf-4077-a618-97c3e5525427",
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+            "d4b010a5-2648-4850-b15d-307658020923",
+            "dbb9b244-483b-4592-9194-4938338419bc"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "5b4bf1bc-3397-4e83-9b17-8b10c6544ed1",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "5b4bf1bc-3397-4e83-9b17-8b10c6544ed1",
+          "full_name" : "Harrison Ford",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "025c58cd-1b7e-43be-9ffb-8571a613579b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "134989c3-3b20-4ae7-8092-3e8ad2333d59"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3b1d0e70-42e5-4c9b-98cf-2681c420a99b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3d825f60-9fff-4dfe-b294-1a45fa1e115d"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4f53452f-a402-4a76-89fd-f034eeb8d657"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b6b8a3b7-1c12-45a8-9da7-4b20db8867df"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "c7bd11a4-30bf-4077-a618-97c3e5525427"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dbb9b244-483b-4592-9194-4938338419bc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "f241a62c-2157-432a-bbeb-9c579c8bc18b"
+            }
+          ],
+          "film_ids" : [
+            "025c58cd-1b7e-43be-9ffb-8571a613579b",
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "134989c3-3b20-4ae7-8092-3e8ad2333d59",
+            "3b1d0e70-42e5-4c9b-98cf-2681c420a99b",
+            "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+            "4f53452f-a402-4a76-89fd-f034eeb8d657",
+            "b6b8a3b7-1c12-45a8-9da7-4b20db8867df",
+            "c7bd11a4-30bf-4077-a618-97c3e5525427",
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+            "dbb9b244-483b-4592-9194-4938338419bc",
+            "f241a62c-2157-432a-bbeb-9c579c8bc18b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "b5d2b63a-ed1f-4e46-8320-cf52a32be358",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "b5d2b63a-ed1f-4e46-8320-cf52a32be358",
+          "full_name" : "Carrie Fisher",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "025c58cd-1b7e-43be-9ffb-8571a613579b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "12a8279d-d851-4eb9-9d64-d690455277cc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "134989c3-3b20-4ae7-8092-3e8ad2333d59"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3d825f60-9fff-4dfe-b294-1a45fa1e115d"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4f53452f-a402-4a76-89fd-f034eeb8d657"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "f241a62c-2157-432a-bbeb-9c579c8bc18b"
+            }
+          ],
+          "film_ids" : [
+            "025c58cd-1b7e-43be-9ffb-8571a613579b",
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "12a8279d-d851-4eb9-9d64-d690455277cc",
+            "134989c3-3b20-4ae7-8092-3e8ad2333d59",
+            "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+            "46f15353-2add-415d-9782-fa9c5b8083d5",
+            "4f53452f-a402-4a76-89fd-f034eeb8d657",
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+            "f241a62c-2157-432a-bbeb-9c579c8bc18b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "e039eedf-4daf-452a-bf92-a0085c68e156",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "e039eedf-4daf-452a-bf92-a0085c68e156",
+          "full_name" : "Peter Cushing",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "3d825f60-9fff-4dfe-b294-1a45fa1e115d"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "73ecd1e6-6326-405a-b51b-69008f383b72"
+            }
+          ],
+          "film_ids" : [
+            "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
+            "73ecd1e6-6326-405a-b51b-69008f383b72"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "1989ed1e-0c0b-4872-9dfb-f5ed13c764e2",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "1989ed1e-0c0b-4872-9dfb-f5ed13c764e2",
+          "full_name" : "Irvin Kershner",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "a2ff04cc-eede-43fc-a503-07f037be8cc8"
+            },
+            {
+              "role" : "director",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "director",
+              "uuid" : "4f53452f-a402-4a76-89fd-f034eeb8d657"
+            }
+          ],
+          "film_ids" : [
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "4f53452f-a402-4a76-89fd-f034eeb8d657",
+            "a2ff04cc-eede-43fc-a503-07f037be8cc8"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "ed149438-4d76-45c9-861b-d3ed48ccbf0c",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "ed149438-4d76-45c9-861b-d3ed48ccbf0c",
+          "full_name" : "Leigh Brackett",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "4f53452f-a402-4a76-89fd-f034eeb8d657"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "64aa7000-698f-4332-b52f-9469e4d44ee1"
+            }
+          ],
+          "film_ids" : [
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "4f53452f-a402-4a76-89fd-f034eeb8d657",
+            "64aa7000-698f-4332-b52f-9469e4d44ee1"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "3217bc91-bcfc-44eb-a609-82d228115c50",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "3217bc91-bcfc-44eb-a609-82d228115c50",
+          "full_name" : "Lawrence Kasdan",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "835dcbe5-2bbc-40a3-8980-eb5605f0e3bf"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "025c58cd-1b7e-43be-9ffb-8571a613579b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "4f53452f-a402-4a76-89fd-f034eeb8d657"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "64aa7000-698f-4332-b52f-9469e4d44ee1"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            }
+          ],
+          "film_ids" : [
+            "025c58cd-1b7e-43be-9ffb-8571a613579b",
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "4f53452f-a402-4a76-89fd-f034eeb8d657",
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c",
+            "64aa7000-698f-4332-b52f-9469e4d44ee1",
+            "835dcbe5-2bbc-40a3-8980-eb5605f0e3bf",
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "efdd1787-8871-4aa9-b1d7-f68e55b913ed",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "efdd1787-8871-4aa9-b1d7-f68e55b913ed",
+          "full_name" : "Billy Dee Williams",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "025c58cd-1b7e-43be-9ffb-8571a613579b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "0312ed51-8833-413f-bff5-0e139c11264a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "49a81ffc-1670-4dcd-bbec-e224064cf99c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "7dc44185-c268-476d-8b0e-488a091c1d4b"
+            }
+          ],
+          "film_ids" : [
+            "025c58cd-1b7e-43be-9ffb-8571a613579b",
+            "0312ed51-8833-413f-bff5-0e139c11264a",
+            "49a81ffc-1670-4dcd-bbec-e224064cf99c",
+            "7dc44185-c268-476d-8b0e-488a091c1d4b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "3214cf58-8dbf-40ab-9185-77213933507e",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "3214cf58-8dbf-40ab-9185-77213933507e",
+          "full_name" : "Richard Marquand",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "025c58cd-1b7e-43be-9ffb-8571a613579b"
+            }
+          ],
+          "film_ids" : [
+            "025c58cd-1b7e-43be-9ffb-8571a613579b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "a1758395-9578-41af-88b8-3f9456e6d938",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "a1758395-9578-41af-88b8-3f9456e6d938",
+          "full_name" : "J.J. Abrams",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "075587eb-91c1-4629-adcb-67c516cdb6eb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "1d42ceae-9397-475c-9517-e94dda7bc2a1"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "1dcfed00-a0a1-4042-9811-66d7eb5d94bb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "24ef3514-6def-46ff-bf8e-c9bb91aafdfd"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "49908121-c711-44ee-b447-84288b3b5e34"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4e9f5f72-aa45-4c5a-965b-fc9cf42c4299"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "86607a8f-bc90-47fa-8261-15647186cbf5"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a99bbda2-d244-4b38-b32c-761248fb0bf2"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "eb592ca7-7aa8-44ac-a59b-1ffcd0b78960"
+            },
+            {
+              "role" : "director",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            },
+            {
+              "role" : "director",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "director",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            },
+            {
+              "role" : "director",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            }
+          ],
+          "film_ids" : [
+            "075587eb-91c1-4629-adcb-67c516cdb6eb",
+            "1d42ceae-9397-475c-9517-e94dda7bc2a1",
+            "1dcfed00-a0a1-4042-9811-66d7eb5d94bb",
+            "24ef3514-6def-46ff-bf8e-c9bb91aafdfd",
+            "46f15353-2add-415d-9782-fa9c5b8083d5",
+            "49908121-c711-44ee-b447-84288b3b5e34",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "4e9f5f72-aa45-4c5a-965b-fc9cf42c4299",
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+            "86607a8f-bc90-47fa-8261-15647186cbf5",
+            "a99bbda2-d244-4b38-b32c-761248fb0bf2",
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394",
+            "eb592ca7-7aa8-44ac-a59b-1ffcd0b78960"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "cec00f0e-200b-4b48-9ed1-2f8fc3c67427",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "cec00f0e-200b-4b48-9ed1-2f8fc3c67427",
+          "full_name" : "Michael Arndt",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            }
+          ],
+          "film_ids" : [
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "2d6f6284-13ce-4d25-9453-c4335432c116",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "2d6f6284-13ce-4d25-9453-c4335432c116",
+          "full_name" : "Adam Driver",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "12a8279d-d851-4eb9-9d64-d690455277cc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "1d42ceae-9397-475c-9517-e94dda7bc2a1"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "91f02795-7628-4ef4-acf2-d93b892365dd"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+            }
+          ],
+          "film_ids" : [
+            "12a8279d-d851-4eb9-9d64-d690455277cc",
+            "1d42ceae-9397-475c-9517-e94dda7bc2a1",
+            "46f15353-2add-415d-9782-fa9c5b8083d5",
+            "91f02795-7628-4ef4-acf2-d93b892365dd",
+            "cddf9b8f-27f9-4fe9-97cb-9e27d4fe3394"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "979996d5-ef97-427d-a0f5-d640cd1813a4",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "979996d5-ef97-427d-a0f5-d640cd1813a4",
+          "full_name" : "Jake Lloyd",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "08a588bd-5eeb-4cf3-8a42-f20195a02c25"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "17f634cd-9581-4ba1-b40b-89ee058c3f55"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3b914679-1f5e-4cbd-8044-d13d35d5236c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "569e23df-7e00-459d-b92a-6cb4653d36b8"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "7a87274a-541a-405c-b148-5946f6c707d4"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "c5653bd8-56b5-4530-90b2-34ce1a2ba6db"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "ec8bad1c-7643-49b3-93b5-cee9c8c1e602"
+            }
+          ],
+          "film_ids" : [
+            "08a588bd-5eeb-4cf3-8a42-f20195a02c25",
+            "17f634cd-9581-4ba1-b40b-89ee058c3f55",
+            "3b914679-1f5e-4cbd-8044-d13d35d5236c",
+            "569e23df-7e00-459d-b92a-6cb4653d36b8",
+            "7a87274a-541a-405c-b148-5946f6c707d4",
+            "c5653bd8-56b5-4530-90b2-34ce1a2ba6db",
+            "ec8bad1c-7643-49b3-93b5-cee9c8c1e602"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "39abe5bd-33b3-44e8-8c12-2e360e2fa621",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "39abe5bd-33b3-44e8-8c12-2e360e2fa621",
+          "full_name" : "Liam Neeson",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "3b914679-1f5e-4cbd-8044-d13d35d5236c"
+            }
+          ],
+          "film_ids" : [
+            "3b914679-1f5e-4cbd-8044-d13d35d5236c"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "69b02c62-a329-414d-83c6-ca54be34de24",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "69b02c62-a329-414d-83c6-ca54be34de24",
+          "full_name" : "Ewan McGregor",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "3b914679-1f5e-4cbd-8044-d13d35d5236c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "516f91da-bd70-4351-ba6d-25e16b7713b7"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "943946ed-4a2b-4c71-8e0b-a58a11bd1323"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+            }
+          ],
+          "film_ids" : [
+            "3b914679-1f5e-4cbd-8044-d13d35d5236c",
+            "516f91da-bd70-4351-ba6d-25e16b7713b7",
+            "943946ed-4a2b-4c71-8e0b-a58a11bd1323",
+            "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "c777f646-dae0-466f-867a-bc535a0b021b",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "c777f646-dae0-466f-867a-bc535a0b021b",
+          "full_name" : "Natalie Portman",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "3b914679-1f5e-4cbd-8044-d13d35d5236c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "516f91da-bd70-4351-ba6d-25e16b7713b7"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+            }
+          ],
+          "film_ids" : [
+            "3b914679-1f5e-4cbd-8044-d13d35d5236c",
+            "516f91da-bd70-4351-ba6d-25e16b7713b7",
+            "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "62df10e8-244d-4c31-b396-564dfbc2f9c5",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "62df10e8-244d-4c31-b396-564dfbc2f9c5",
+          "full_name" : "Hayden Christensen",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "516f91da-bd70-4351-ba6d-25e16b7713b7"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "daae47e4-cbd0-4ffd-a150-55201b357d5b"
+            }
+          ],
+          "film_ids" : [
+            "516f91da-bd70-4351-ba6d-25e16b7713b7",
+            "c4c5e3de-c0c9-4091-b242-ceb331004dfd",
+            "daae47e4-cbd0-4ffd-a150-55201b357d5b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "7214e401-bb43-4da2-9e7a-cd6ca31ee8ca",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "7214e401-bb43-4da2-9e7a-cd6ca31ee8ca",
+          "full_name" : "Ian McDiarmid",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "516f91da-bd70-4351-ba6d-25e16b7713b7"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a20566a2-b3ec-4814-ae9a-040aabcb38e7"
+            }
+          ],
+          "film_ids" : [
+            "516f91da-bd70-4351-ba6d-25e16b7713b7",
+            "a20566a2-b3ec-4814-ae9a-040aabcb38e7"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "8c220eeb-8022-44d5-8435-1f8edf258ac7",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "8c220eeb-8022-44d5-8435-1f8edf258ac7",
+          "full_name" : "Jonathan Hales",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+            }
+          ],
+          "film_ids" : [
+            "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "ef1e2ad4-df4f-4fe0-8fa9-b8db690c4a19",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "ef1e2ad4-df4f-4fe0-8fa9-b8db690c4a19",
+          "full_name" : "Christopher Lee",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+            }
+          ],
+          "film_ids" : [
+            "c4c5e3de-c0c9-4091-b242-ceb331004dfd"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "9b58c99a-e5a3-4f24-8f67-a038665758d6",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "9b58c99a-e5a3-4f24-8f67-a038665758d6",
+          "full_name" : "Roberto Orci",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "020adfa7-7251-4fb9-b6db-07b60664cb67"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            }
+          ],
+          "film_ids" : [
+            "020adfa7-7251-4fb9-b6db-07b60664cb67",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "82b7dffe-6254-4598-b6ef-5be747193946",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "82b7dffe-6254-4598-b6ef-5be747193946",
+          "full_name" : "Alex Kurtzman",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "020adfa7-7251-4fb9-b6db-07b60664cb67"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "a9ee0b3f-ec56-4107-9b6d-0458dfa3f415"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "cc397479-a5f8-488f-bd7f-7fbb94ec6e18"
+            }
+          ],
+          "film_ids" : [
+            "020adfa7-7251-4fb9-b6db-07b60664cb67",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+            "a9ee0b3f-ec56-4107-9b6d-0458dfa3f415",
+            "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97",
+            "cc397479-a5f8-488f-bd7f-7fbb94ec6e18"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "6960e2ca-889f-41f5-b728-1e7313e54d6c",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "6960e2ca-889f-41f5-b728-1e7313e54d6c",
+          "full_name" : "Gene Roddenberry",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "460d5dba-7973-49d5-a790-c749febac3a8"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "08c25ef9-cbd3-4368-8887-9ef884334750"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "107dac30-6c1c-4857-a937-682a6f0cccb0"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "21d3123e-76f1-41eb-871a-706debe7b243"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "37c6cd37-1222-4470-9221-3170367d134b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "3b53cdf1-1acd-4837-b179-9e4c839c607e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "4090e081-2cad-4016-a8a9-cb15f38db64c"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "68bd16e6-754d-4eb7-95f1-4ee532b88b1c"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "94ca979d-8a5f-433d-93f1-076fdb838eed"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "b1384a92-f7fe-476b-b90b-6cec2b7a0dce"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "cab78c14-7872-4e6b-b048-deb24e8da1ef"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "cb91931a-27b2-4540-8d42-702c1df77c29"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "d2d9b15d-a134-446a-af51-eb8c5207fd46"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "d38bced9-f39d-47b5-ad4c-5052d76c0246"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "db5dcded-29da-4c96-91a2-df1407f0a80a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "e79b49dc-a5d9-46ec-a2c6-4cead985d732"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "ef74f021-4276-4747-8524-b428a7df787a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "f8dd9e27-8b53-4579-b585-94510d705bd3"
+            }
+          ],
+          "film_ids" : [
+            "08c25ef9-cbd3-4368-8887-9ef884334750",
+            "107dac30-6c1c-4857-a937-682a6f0cccb0",
+            "1b7d7c64-8be8-47db-8924-23029a9878a9",
+            "21d3123e-76f1-41eb-871a-706debe7b243",
+            "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e",
+            "37c6cd37-1222-4470-9221-3170367d134b",
+            "3b53cdf1-1acd-4837-b179-9e4c839c607e",
+            "4090e081-2cad-4016-a8a9-cb15f38db64c",
+            "460d5dba-7973-49d5-a790-c749febac3a8",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "50d842be-bcda-401e-90de-b06929611ce0",
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b",
+            "68bd16e6-754d-4eb7-95f1-4ee532b88b1c",
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e",
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+            "82297925-80cc-4c47-b6cf-6b5e06e23b70",
+            "94ca979d-8a5f-433d-93f1-076fdb838eed",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb",
+            "9d284e83-21f0-4073-aac0-4abee51193d8",
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3",
+            "b1384a92-f7fe-476b-b90b-6cec2b7a0dce",
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e",
+            "cab78c14-7872-4e6b-b048-deb24e8da1ef",
+            "cb91931a-27b2-4540-8d42-702c1df77c29",
+            "d2d9b15d-a134-446a-af51-eb8c5207fd46",
+            "d38bced9-f39d-47b5-ad4c-5052d76c0246",
+            "db5dcded-29da-4c96-91a2-df1407f0a80a",
+            "dceab335-df68-4ee5-8b8d-6fb8d9a68041",
+            "e79b49dc-a5d9-46ec-a2c6-4cead985d732",
+            "ef74f021-4276-4747-8524-b428a7df787a",
+            "f8dd9e27-8b53-4579-b585-94510d705bd3"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "9f38323f-5912-40d2-a90c-b56899746f2a",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "9f38323f-5912-40d2-a90c-b56899746f2a",
+          "full_name" : "Chris Pine",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "020adfa7-7251-4fb9-b6db-07b60664cb67"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "572170d4-9a3d-47aa-8ffa-24c6b4ea367c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "5ebdd8a8-f324-4546-9126-5a24b63089ad"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            }
+          ],
+          "film_ids" : [
+            "020adfa7-7251-4fb9-b6db-07b60664cb67",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "572170d4-9a3d-47aa-8ffa-24c6b4ea367c",
+            "5ebdd8a8-f324-4546-9126-5a24b63089ad",
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "8a34f121-7ce6-4021-b467-abec993fc6cd",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "8a34f121-7ce6-4021-b467-abec993fc6cd",
+          "full_name" : "Zachary Quinto",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "020adfa7-7251-4fb9-b6db-07b60664cb67"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            }
+          ],
+          "film_ids" : [
+            "020adfa7-7251-4fb9-b6db-07b60664cb67",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "5a3d0299-2df2-4070-9fda-65ff4dfa863c",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "5a3d0299-2df2-4070-9fda-65ff4dfa863c",
+          "full_name" : "Leonard Nimoy",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "15504dc5-e5ec-445e-bc84-98f928eeae70"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "19867a14-5e9e-481c-ab25-10f386a6faef"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "37c6cd37-1222-4470-9221-3170367d134b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "53ce35b8-7a0e-49a3-a2e4-4abc51d8d257"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "575f6909-fc51-4d64-a7b8-9d236b374191"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "5ebdd8a8-f324-4546-9126-5a24b63089ad"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "5edfd118-fc47-4aac-af3b-3f658e38c824"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "62bb2379-5017-421a-9030-1f3f7bb51c9c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "9e1ec2e3-336e-4b9f-a6e0-f93c2ea9ee6d"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "daa33ede-ee33-4da9-93b9-cc3819b04358"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "db5dcded-29da-4c96-91a2-df1407f0a80a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+            },
+            {
+              "role" : "director",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "director",
+              "uuid" : "37c6cd37-1222-4470-9221-3170367d134b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            }
+          ],
+          "film_ids" : [
+            "15504dc5-e5ec-445e-bc84-98f928eeae70",
+            "19867a14-5e9e-481c-ab25-10f386a6faef",
+            "1b7d7c64-8be8-47db-8924-23029a9878a9",
+            "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e",
+            "37c6cd37-1222-4470-9221-3170367d134b",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b",
+            "53ce35b8-7a0e-49a3-a2e4-4abc51d8d257",
+            "575f6909-fc51-4d64-a7b8-9d236b374191",
+            "5ebdd8a8-f324-4546-9126-5a24b63089ad",
+            "5edfd118-fc47-4aac-af3b-3f658e38c824",
+            "62bb2379-5017-421a-9030-1f3f7bb51c9c",
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e",
+            "82297925-80cc-4c47-b6cf-6b5e06e23b70",
+            "9e1ec2e3-336e-4b9f-a6e0-f93c2ea9ee6d",
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3",
+            "daa33ede-ee33-4da9-93b9-cc3819b04358",
+            "db5dcded-29da-4c96-91a2-df1407f0a80a",
+            "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "959d148c-022b-427f-a68b-bbe58674fe65",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "959d148c-022b-427f-a68b-bbe58674fe65",
+          "full_name" : "Eric Bana",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "075587eb-91c1-4629-adcb-67c516cdb6eb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "4e9f5f72-aa45-4c5a-965b-fc9cf42c4299"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "5ebdd8a8-f324-4546-9126-5a24b63089ad"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "5edfd118-fc47-4aac-af3b-3f658e38c824"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a99bbda2-d244-4b38-b32c-761248fb0bf2"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "e3f52dc7-721c-453c-adab-53ae26bd88a1"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "eb592ca7-7aa8-44ac-a59b-1ffcd0b78960"
+            }
+          ],
+          "film_ids" : [
+            "075587eb-91c1-4629-adcb-67c516cdb6eb",
+            "4af6c9c9-0be0-4864-b1e9-7f87dd59ee1f",
+            "4e9f5f72-aa45-4c5a-965b-fc9cf42c4299",
+            "5ebdd8a8-f324-4546-9126-5a24b63089ad",
+            "5edfd118-fc47-4aac-af3b-3f658e38c824",
+            "a99bbda2-d244-4b38-b32c-761248fb0bf2",
+            "e3f52dc7-721c-453c-adab-53ae26bd88a1",
+            "eb592ca7-7aa8-44ac-a59b-1ffcd0b78960"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "b66db341-5dcd-4aaf-b536-050b59979357",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "b66db341-5dcd-4aaf-b536-050b59979357",
+          "full_name" : "Rian Johnson",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "12a8279d-d851-4eb9-9d64-d690455277cc"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "12a8279d-d851-4eb9-9d64-d690455277cc"
+            }
+          ],
+          "film_ids" : [
+            "12a8279d-d851-4eb9-9d64-d690455277cc"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "7026c3f4-d7b8-414a-99d5-06de1788a0ee",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "7026c3f4-d7b8-414a-99d5-06de1788a0ee",
+          "full_name" : "Daisy Ridley",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "12a8279d-d851-4eb9-9d64-d690455277cc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            }
+          ],
+          "film_ids" : [
+            "12a8279d-d851-4eb9-9d64-d690455277cc",
+            "46f15353-2add-415d-9782-fa9c5b8083d5"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "189f1d17-c928-492a-aa33-2212b5ad1555",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "189f1d17-c928-492a-aa33-2212b5ad1555",
+          "full_name" : "Gareth Edwards",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "1dcfed00-a0a1-4042-9811-66d7eb5d94bb"
+            },
+            {
+              "role" : "director",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e",
+            "1dcfed00-a0a1-4042-9811-66d7eb5d94bb"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "06d3686f-56e0-40df-81ea-af95a203b58a",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "06d3686f-56e0-40df-81ea-af95a203b58a",
+          "full_name" : "Chris Weitz",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "6d9a226f-85ca-4270-9f26-7d1b1cc7b444",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "6d9a226f-85ca-4270-9f26-7d1b1cc7b444",
+          "full_name" : "Tony Gilroy",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "5bd4381f-5763-474f-baa0-f7f62a0819f9",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "5bd4381f-5763-474f-baa0-f7f62a0819f9",
+          "full_name" : "John Knoll",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "aa00b2ae-86b4-43e9-9032-f0ea4c12697a"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e",
+            "aa00b2ae-86b4-43e9-9032-f0ea4c12697a"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "e0dd7338-b686-465c-93da-c9b2c57d46bb",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "e0dd7338-b686-465c-93da-c9b2c57d46bb",
+          "full_name" : "Gary Whitta",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "ccb3418a-d3e2-4878-a355-6f720211f39f",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "ccb3418a-d3e2-4878-a355-6f720211f39f",
+          "full_name" : "Felicity Jones",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "ac44d92b-7de3-4274-908f-0173e6ba310b",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "ac44d92b-7de3-4274-908f-0173e6ba310b",
+          "full_name" : "Diego Luna",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "c59c5caf-5ca9-430e-bde5-f5141de25cb6",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "c59c5caf-5ca9-430e-bde5-f5141de25cb6",
+          "full_name" : "Alan Tudyk",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "6e2f9652-460b-4c6a-b527-5c05b40965fe",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "6e2f9652-460b-4c6a-b527-5c05b40965fe",
+          "full_name" : "Donnie Yen",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "118fd71b-93cd-4de5-95a4-e1485edad30e"
+            }
+          ],
+          "film_ids" : [
+            "118fd71b-93cd-4de5-95a4-e1485edad30e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "dbac6947-e620-4f92-b6a1-dae9a3b07422",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "dbac6947-e620-4f92-b6a1-dae9a3b07422",
+          "full_name" : "Damon Lindelof",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            }
+          ],
+          "film_ids" : [
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "4a416628-4a36-431c-9121-513674dae840",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "4a416628-4a36-431c-9121-513674dae840",
+          "full_name" : "Zoe Saldana",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            }
+          ],
+          "film_ids" : [
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "afa7c253-6702-47d7-a451-cf2bc9350310",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "afa7c253-6702-47d7-a451-cf2bc9350310",
+          "full_name" : "Karl Urban",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "6ecc7a32-14a1-4da8-9881-bf81f0f09897"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            }
+          ],
+          "film_ids" : [
+            "6ecc7a32-14a1-4da8-9881-bf81f0f09897",
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "cdf3ace6-802d-4620-b875-809e6318a493",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "cdf3ace6-802d-4620-b875-809e6318a493",
+          "full_name" : "Chris Terrio",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            }
+          ],
+          "film_ids" : [
+            "46f15353-2add-415d-9782-fa9c5b8083d5"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "26e020b4-98d9-4c78-b85a-0570eb19d9bc",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "26e020b4-98d9-4c78-b85a-0570eb19d9bc",
+          "full_name" : "Derek Connolly",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            }
+          ],
+          "film_ids" : [
+            "46f15353-2add-415d-9782-fa9c5b8083d5"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "5623ae85-91ff-44f1-b46d-21c9d1d0d7f6",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "5623ae85-91ff-44f1-b46d-21c9d1d0d7f6",
+          "full_name" : "Colin Trevorrow",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "46f15353-2add-415d-9782-fa9c5b8083d5"
+            }
+          ],
+          "film_ids" : [
+            "46f15353-2add-415d-9782-fa9c5b8083d5"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "5c360057-c51f-4376-bdf5-049b87fa853b",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "5c360057-c51f-4376-bdf5-049b87fa853b",
+          "full_name" : "Bradley Cooper",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            },
+            {
+              "role" : "director",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "39276c87-27ec-42f3-a573-e0184fc463a7",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "39276c87-27ec-42f3-a573-e0184fc463a7",
+          "full_name" : "Eric Roth",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "dd0d82d8-1c95-4bb9-b9c6-d707773aa4db",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "dd0d82d8-1c95-4bb9-b9c6-d707773aa4db",
+          "full_name" : "Will Fetters",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "7fb9ae3d-aeac-40a9-aa25-cd6992be16a6",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "7fb9ae3d-aeac-40a9-aa25-cd6992be16a6",
+          "full_name" : "Moss Hart",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "ddbc2fc3-389e-419f-a8fa-59e6cee10802"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "ddbc2fc3-389e-419f-a8fa-59e6cee10802",
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "2b0f84fb-416b-4c30-80db-69478bf872be",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "2b0f84fb-416b-4c30-80db-69478bf872be",
+          "full_name" : "John Gregory Dunne",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "da7941cf-3be4-4f0b-a27e-649f18b4e8e9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "da7941cf-3be4-4f0b-a27e-649f18b4e8e9",
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "f24f3fa4-2e42-4dde-be8c-2aba541a593b",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "f24f3fa4-2e42-4dde-be8c-2aba541a593b",
+          "full_name" : "Joan Didion",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "da7941cf-3be4-4f0b-a27e-649f18b4e8e9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "da7941cf-3be4-4f0b-a27e-649f18b4e8e9",
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "e31f6518-6f0a-4738-a224-211eb4150e13",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "e31f6518-6f0a-4738-a224-211eb4150e13",
+          "full_name" : "Frank Pierson",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "da7941cf-3be4-4f0b-a27e-649f18b4e8e9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "da7941cf-3be4-4f0b-a27e-649f18b4e8e9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "da7941cf-3be4-4f0b-a27e-649f18b4e8e9",
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "5ac68e18-a84c-4a98-a2ba-85d1bc85e0a4",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "5ac68e18-a84c-4a98-a2ba-85d1bc85e0a4",
+          "full_name" : "William A. Wellman",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "045f2518-5c38-48df-9c48-639520ab57af"
+            },
+            {
+              "role" : "director",
+              "uuid" : "68dfb5e2-7014-4738-a2da-c65bd41f5af5"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "045f2518-5c38-48df-9c48-639520ab57af"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "da7941cf-3be4-4f0b-a27e-649f18b4e8e9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "ddbc2fc3-389e-419f-a8fa-59e6cee10802"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "045f2518-5c38-48df-9c48-639520ab57af",
+            "68dfb5e2-7014-4738-a2da-c65bd41f5af5",
+            "da7941cf-3be4-4f0b-a27e-649f18b4e8e9",
+            "ddbc2fc3-389e-419f-a8fa-59e6cee10802",
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "e259d88e-b693-436a-9fed-a10204b8fd91",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "e259d88e-b693-436a-9fed-a10204b8fd91",
+          "full_name" : "Robert Carson",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "045f2518-5c38-48df-9c48-639520ab57af"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "da7941cf-3be4-4f0b-a27e-649f18b4e8e9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "ddbc2fc3-389e-419f-a8fa-59e6cee10802"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "045f2518-5c38-48df-9c48-639520ab57af",
+            "da7941cf-3be4-4f0b-a27e-649f18b4e8e9",
+            "ddbc2fc3-389e-419f-a8fa-59e6cee10802",
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "77789b44-e734-4fa6-91e8-212a09fa4a32",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "77789b44-e734-4fa6-91e8-212a09fa4a32",
+          "full_name" : "Lady Gaga",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "e52627f7-a659-476a-b415-e58e6bebe824",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "e52627f7-a659-476a-b415-e58e6bebe824",
+          "full_name" : "Sam Elliott",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "fe2b0699-b5ac-437a-9a69-e747b11eb641",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "fe2b0699-b5ac-437a-9a69-e747b11eb641",
+          "full_name" : "Andrew Dice Clay",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "2361a041-709b-41c7-b34f-9d9142744085"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "fda827f8-d261-4c23-9e9c-e42787580c4d"
+            }
+          ],
+          "film_ids" : [
+            "2361a041-709b-41c7-b34f-9d9142744085",
+            "fda827f8-d261-4c23-9e9c-e42787580c4d"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "33eb3b88-69f2-4f38-a26d-ff32f1feb1a1",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "33eb3b88-69f2-4f38-a26d-ff32f1feb1a1",
+          "full_name" : "Ron Howard",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            }
+          ],
+          "film_ids" : [
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "a2c091a2-281e-4732-9357-79b213d8d92f",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "a2c091a2-281e-4732-9357-79b213d8d92f",
+          "full_name" : "Jonathan Kasdan",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            }
+          ],
+          "film_ids" : [
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "ce06e6d7-600b-4829-badf-5d02c61f1a92",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "ce06e6d7-600b-4829-badf-5d02c61f1a92",
+          "full_name" : "Alden Ehrenreich",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            }
+          ],
+          "film_ids" : [
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "c69da9bd-eb87-4a06-be70-95d4ee2da1cc",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "c69da9bd-eb87-4a06-be70-95d4ee2da1cc",
+          "full_name" : "Joonas Suotamo",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            }
+          ],
+          "film_ids" : [
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "01377f6d-9767-48ce-9e37-3c81f8a3c739",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "01377f6d-9767-48ce-9e37-3c81f8a3c739",
+          "full_name" : "Woody Harrelson",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            }
+          ],
+          "film_ids" : [
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "7a852205-2bf6-4b75-b3b2-8a46ed6e91ef",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "7a852205-2bf6-4b75-b3b2-8a46ed6e91ef",
+          "full_name" : "Emilia Clarke",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+            }
+          ],
+          "film_ids" : [
+            "57beb3fd-b1c9-4f8a-9c06-2da13f95251c"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "8856053e-8a4f-42e1-bb27-6ab8fd664518",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "8856053e-8a4f-42e1-bb27-6ab8fd664518",
+          "full_name" : "Justin Lin",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            }
+          ],
+          "film_ids" : [
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "2cf03687-ebc3-47dc-a99f-602f6cc55f7a",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "2cf03687-ebc3-47dc-a99f-602f6cc55f7a",
+          "full_name" : "Simon Pegg",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "020adfa7-7251-4fb9-b6db-07b60664cb67"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "572170d4-9a3d-47aa-8ffa-24c6b4ea367c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d94787ee-8cf4-45a3-88a3-0be4a21becbe"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            }
+          ],
+          "film_ids" : [
+            "020adfa7-7251-4fb9-b6db-07b60664cb67",
+            "572170d4-9a3d-47aa-8ffa-24c6b4ea367c",
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e",
+            "d94787ee-8cf4-45a3-88a3-0be4a21becbe"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "698522c6-f8e9-403a-8922-9d320dec5753",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "698522c6-f8e9-403a-8922-9d320dec5753",
+          "full_name" : "Doug Jung",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+            }
+          ],
+          "film_ids" : [
+            "b1f1e8a6-e310-47d9-a93c-6a7b192bac0e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "5bddea2c-8609-499a-a444-77e0142743c0",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "5bddea2c-8609-499a-a444-77e0142743c0",
+          "full_name" : "Jonathan Frakes",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "0ddc8a23-e625-4aa8-91f5-5aeb7ac82253"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "196804b8-a035-4fbe-afa4-59ccdfde8d65"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "74429db7-22b1-4c93-a71d-44b3ee1ffc11"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a6fed222-b60c-49ff-bcd6-30e9472bc4c4"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1384a92-f7fe-476b-b90b-6cec2b7a0dce"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cc917adf-6327-4773-bc21-936995f84391"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e"
+            },
+            {
+              "role" : "director",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "director",
+              "uuid" : "5dd2dda0-aab4-4958-97ab-de0382beb91f"
+            },
+            {
+              "role" : "director",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            }
+          ],
+          "film_ids" : [
+            "0ddc8a23-e625-4aa8-91f5-5aeb7ac82253",
+            "196804b8-a035-4fbe-afa4-59ccdfde8d65",
+            "50d842be-bcda-401e-90de-b06929611ce0",
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "5dd2dda0-aab4-4958-97ab-de0382beb91f",
+            "74429db7-22b1-4c93-a71d-44b3ee1ffc11",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb",
+            "9d284e83-21f0-4073-aac0-4abee51193d8",
+            "a6fed222-b60c-49ff-bcd6-30e9472bc4c4",
+            "b1384a92-f7fe-476b-b90b-6cec2b7a0dce",
+            "cc917adf-6327-4773-bc21-936995f84391",
+            "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "88a99b4d-4d06-4754-b06c-93217cf53244",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "88a99b4d-4d06-4754-b06c-93217cf53244",
+          "full_name" : "Rick Berman",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "27e04b56-0d99-48d6-9600-557623985039"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "7f6d5e54-ee65-41ef-b4a5-bd83b6cafd56"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "e79b49dc-a5d9-46ec-a2c6-4cead985d732"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "edb9d4d9-0e13-476c-960c-26f97f264ecb"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "47050db6-580f-493c-a007-a11c8768ce1b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "a144d250-6667-47e4-94bd-0ee59c0dc05f"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "de5347cf-a70d-430f-8005-786326e28794"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "e79b49dc-a5d9-46ec-a2c6-4cead985d732"
+            }
+          ],
+          "film_ids" : [
+            "27e04b56-0d99-48d6-9600-557623985039",
+            "47050db6-580f-493c-a007-a11c8768ce1b",
+            "50d842be-bcda-401e-90de-b06929611ce0",
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "7f6d5e54-ee65-41ef-b4a5-bd83b6cafd56",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb",
+            "9d284e83-21f0-4073-aac0-4abee51193d8",
+            "a144d250-6667-47e4-94bd-0ee59c0dc05f",
+            "de5347cf-a70d-430f-8005-786326e28794",
+            "e79b49dc-a5d9-46ec-a2c6-4cead985d732",
+            "edb9d4d9-0e13-476c-960c-26f97f264ecb"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "d67d5cb8-4541-4b20-89be-4100ba95e615",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "d67d5cb8-4541-4b20-89be-4100ba95e615",
+          "full_name" : "Brannon Braga",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "47050db6-580f-493c-a007-a11c8768ce1b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            }
+          ],
+          "film_ids" : [
+            "47050db6-580f-493c-a007-a11c8768ce1b",
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "382da5d5-135b-4b02-a069-ba9beb5f3786",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "382da5d5-135b-4b02-a069-ba9beb5f3786",
+          "full_name" : "Ronald D. Moore",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            }
+          ],
+          "film_ids" : [
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "57a471b1-09dc-48fd-ba8a-1211015a0110",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "57a471b1-09dc-48fd-ba8a-1211015a0110",
+          "full_name" : "Patrick Stewart",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "4107f7ac-e164-41f0-8689-189332f51742"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "8a9981d0-98c4-447a-9709-742fe7f6d9dc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1384a92-f7fe-476b-b90b-6cec2b7a0dce"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1a2aae8-5c9e-4583-b89e-883c0d0c969a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cc397479-a5f8-488f-bd7f-7fbb94ec6e18"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cc917adf-6327-4773-bc21-936995f84391"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dd007623-ae26-4acc-acf4-6664fa79584f"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "eda3be8d-d0bd-4cf6-84ed-7bf80c371605"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "f8dd9e27-8b53-4579-b585-94510d705bd3"
+            }
+          ],
+          "film_ids" : [
+            "4107f7ac-e164-41f0-8689-189332f51742",
+            "50d842be-bcda-401e-90de-b06929611ce0",
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "8a9981d0-98c4-447a-9709-742fe7f6d9dc",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb",
+            "9d284e83-21f0-4073-aac0-4abee51193d8",
+            "b1384a92-f7fe-476b-b90b-6cec2b7a0dce",
+            "b1a2aae8-5c9e-4583-b89e-883c0d0c969a",
+            "cc397479-a5f8-488f-bd7f-7fbb94ec6e18",
+            "cc917adf-6327-4773-bc21-936995f84391",
+            "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e",
+            "dd007623-ae26-4acc-acf4-6664fa79584f",
+            "eda3be8d-d0bd-4cf6-84ed-7bf80c371605",
+            "f8dd9e27-8b53-4579-b585-94510d705bd3"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "972c86a5-16f4-432b-b9b3-54965291ddb0",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "972c86a5-16f4-432b-b9b3-54965291ddb0",
+          "full_name" : "Brent Spiner",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "8a9981d0-98c4-447a-9709-742fe7f6d9dc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "8aa504f7-a35b-4d79-bd56-35ef7fc17080"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            }
+          ],
+          "film_ids" : [
+            "50d842be-bcda-401e-90de-b06929611ce0",
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "8a9981d0-98c4-447a-9709-742fe7f6d9dc",
+            "8aa504f7-a35b-4d79-bd56-35ef7fc17080",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb",
+            "9d284e83-21f0-4073-aac0-4abee51193d8",
+            "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "fc9f27d2-aaee-46e6-b263-40ec8d2dd355",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "fc9f27d2-aaee-46e6-b263-40ec8d2dd355",
+          "full_name" : "LeVar Burton",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "06bd9964-5617-460b-a1bf-74542e89fe43"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "08c25ef9-cbd3-4368-8887-9ef884334750"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "196804b8-a035-4fbe-afa4-59ccdfde8d65"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "499987ef-5dde-481d-bd95-30ef26937894"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "74429db7-22b1-4c93-a71d-44b3ee1ffc11"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1384a92-f7fe-476b-b90b-6cec2b7a0dce"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cb91931a-27b2-4540-8d42-702c1df77c29"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "cc917adf-6327-4773-bc21-936995f84391"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d38bced9-f39d-47b5-ad4c-5052d76c0246"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "edb9d4d9-0e13-476c-960c-26f97f264ecb"
+            }
+          ],
+          "film_ids" : [
+            "06bd9964-5617-460b-a1bf-74542e89fe43",
+            "08c25ef9-cbd3-4368-8887-9ef884334750",
+            "196804b8-a035-4fbe-afa4-59ccdfde8d65",
+            "499987ef-5dde-481d-bd95-30ef26937894",
+            "50d842be-bcda-401e-90de-b06929611ce0",
+            "50fb4de9-e4b3-4aca-9f2f-00a48f12f9b3",
+            "74429db7-22b1-4c93-a71d-44b3ee1ffc11",
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb",
+            "9d284e83-21f0-4073-aac0-4abee51193d8",
+            "b1384a92-f7fe-476b-b90b-6cec2b7a0dce",
+            "cb91931a-27b2-4540-8d42-702c1df77c29",
+            "cc917adf-6327-4773-bc21-936995f84391",
+            "d1e24e68-1c00-4d81-8dff-9d126c1a6a5e",
+            "d38bced9-f39d-47b5-ad4c-5052d76c0246",
+            "edb9d4d9-0e13-476c-960c-26f97f264ecb"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "c883c2c6-d7a4-4001-8084-e2851904e91a",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "c883c2c6-d7a4-4001-8084-e2851904e91a",
+          "full_name" : "Nicholas Meyer",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            },
+            {
+              "role" : "director",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            }
+          ],
+          "film_ids" : [
+            "1b7d7c64-8be8-47db-8924-23029a9878a9",
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b",
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "58411ec0-c40a-43da-95e3-0adc74b7e7f6",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "58411ec0-c40a-43da-95e3-0adc74b7e7f6",
+          "full_name" : "Harve Bennett",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "37c6cd37-1222-4470-9221-3170367d134b"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "3b53cdf1-1acd-4837-b179-9e4c839c607e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            }
+          ],
+          "film_ids" : [
+            "1b7d7c64-8be8-47db-8924-23029a9878a9",
+            "37c6cd37-1222-4470-9221-3170367d134b",
+            "3b53cdf1-1acd-4837-b179-9e4c839c607e",
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e",
+            "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "24b5b1fb-9931-4964-a0d2-ce664c00c1d5",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "24b5b1fb-9931-4964-a0d2-ce664c00c1d5",
+          "full_name" : "Jack B. Sowards",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            }
+          ],
+          "film_ids" : [
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "9758b894-57d7-465d-b657-c5803dd5b7f7",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "9758b894-57d7-465d-b657-c5803dd5b7f7",
+          "full_name" : "William Shatner",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "19867a14-5e9e-481c-ab25-10f386a6faef"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "37c6cd37-1222-4470-9221-3170367d134b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "3beffb27-9dad-4b5d-9845-220ed9cd22fc"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "53ce35b8-7a0e-49a3-a2e4-4abc51d8d257"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "62bb2379-5017-421a-9030-1f3f7bb51c9c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "daa33ede-ee33-4da9-93b9-cc3819b04358"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "db5dcded-29da-4c96-91a2-df1407f0a80a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "eda3be8d-d0bd-4cf6-84ed-7bf80c371605"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "fe758dd4-9063-42d4-bf08-bdc7dbae3479"
+            },
+            {
+              "role" : "director",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "3b53cdf1-1acd-4837-b179-9e4c839c607e"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            }
+          ],
+          "film_ids" : [
+            "19867a14-5e9e-481c-ab25-10f386a6faef",
+            "1b7d7c64-8be8-47db-8924-23029a9878a9",
+            "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e",
+            "37c6cd37-1222-4470-9221-3170367d134b",
+            "3b53cdf1-1acd-4837-b179-9e4c839c607e",
+            "3beffb27-9dad-4b5d-9845-220ed9cd22fc",
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b",
+            "53ce35b8-7a0e-49a3-a2e4-4abc51d8d257",
+            "62bb2379-5017-421a-9030-1f3f7bb51c9c",
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e",
+            "82297925-80cc-4c47-b6cf-6b5e06e23b70",
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3",
+            "daa33ede-ee33-4da9-93b9-cc3819b04358",
+            "db5dcded-29da-4c96-91a2-df1407f0a80a",
+            "dceab335-df68-4ee5-8b8d-6fb8d9a68041",
+            "eda3be8d-d0bd-4cf6-84ed-7bf80c371605",
+            "fe758dd4-9063-42d4-bf08-bdc7dbae3479"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "836bb95b-6db8-4418-a110-f41663b1c025",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "836bb95b-6db8-4418-a110-f41663b1c025",
+          "full_name" : "DeForest Kelley",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "19867a14-5e9e-481c-ab25-10f386a6faef"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "2330ec4f-d7f0-4f5a-b5ae-5d6d88aff0d4"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "37c6cd37-1222-4470-9221-3170367d134b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "62bb2379-5017-421a-9030-1f3f7bb51c9c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "daa33ede-ee33-4da9-93b9-cc3819b04358"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "db5dcded-29da-4c96-91a2-df1407f0a80a"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+            }
+          ],
+          "film_ids" : [
+            "19867a14-5e9e-481c-ab25-10f386a6faef",
+            "1b7d7c64-8be8-47db-8924-23029a9878a9",
+            "2330ec4f-d7f0-4f5a-b5ae-5d6d88aff0d4",
+            "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e",
+            "37c6cd37-1222-4470-9221-3170367d134b",
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b",
+            "62bb2379-5017-421a-9030-1f3f7bb51c9c",
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e",
+            "82297925-80cc-4c47-b6cf-6b5e06e23b70",
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3",
+            "daa33ede-ee33-4da9-93b9-cc3819b04358",
+            "db5dcded-29da-4c96-91a2-df1407f0a80a",
+            "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "807ce9c3-6294-485c-803a-1975066f239f",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "807ce9c3-6294-485c-803a-1975066f239f",
+          "full_name" : "James Doohan",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "15504dc5-e5ec-445e-bc84-98f928eeae70"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "19867a14-5e9e-481c-ab25-10f386a6faef"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "2330ec4f-d7f0-4f5a-b5ae-5d6d88aff0d4"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "37c6cd37-1222-4470-9221-3170367d134b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "74429db7-22b1-4c93-a71d-44b3ee1ffc11"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "82297925-80cc-4c47-b6cf-6b5e06e23b70"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "daa33ede-ee33-4da9-93b9-cc3819b04358"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+            }
+          ],
+          "film_ids" : [
+            "15504dc5-e5ec-445e-bc84-98f928eeae70",
+            "19867a14-5e9e-481c-ab25-10f386a6faef",
+            "1b7d7c64-8be8-47db-8924-23029a9878a9",
+            "2330ec4f-d7f0-4f5a-b5ae-5d6d88aff0d4",
+            "37c6cd37-1222-4470-9221-3170367d134b",
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b",
+            "6e5cd268-8ce4-45f9-87d2-52f0f26edc9e",
+            "74429db7-22b1-4c93-a71d-44b3ee1ffc11",
+            "82297925-80cc-4c47-b6cf-6b5e06e23b70",
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3",
+            "daa33ede-ee33-4da9-93b9-cc3819b04358",
+            "dceab335-df68-4ee5-8b8d-6fb8d9a68041"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "035c4793-4864-45b8-8d4f-b86b454c60b0",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "035c4793-4864-45b8-8d4f-b86b454c60b0",
+          "full_name" : "Marina Sirtis",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "62bb2379-5017-421a-9030-1f3f7bb51c9c"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "b1384a92-f7fe-476b-b90b-6cec2b7a0dce"
+            }
+          ],
+          "film_ids" : [
+            "62bb2379-5017-421a-9030-1f3f7bb51c9c",
+            "b1384a92-f7fe-476b-b90b-6cec2b7a0dce"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "b670fa3e-9f7b-4786-a00c-09d95f1e7b5c",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "b670fa3e-9f7b-4786-a00c-09d95f1e7b5c",
+          "full_name" : "Bryan Fuller",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "a9ee0b3f-ec56-4107-9b6d-0458dfa3f415"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+            }
+          ],
+          "film_ids" : [
+            "a9ee0b3f-ec56-4107-9b6d-0458dfa3f415",
+            "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "bd2a8ab8-a7bc-45cf-852b-d23cb1cf4b5d",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "bd2a8ab8-a7bc-45cf-852b-d23cb1cf4b5d",
+          "full_name" : "Sonequa Martin-Green",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+            }
+          ],
+          "film_ids" : [
+            "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "43bb73ff-0f0e-4169-b708-32a77dc1c50e",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "43bb73ff-0f0e-4169-b708-32a77dc1c50e",
+          "full_name" : "Doug Jones",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+            }
+          ],
+          "film_ids" : [
+            "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "3f123595-ecfb-4740-a1c5-ceab9fc21c23",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "3f123595-ecfb-4740-a1c5-ceab9fc21c23",
+          "full_name" : "Anthony Rapp",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+            }
+          ],
+          "film_ids" : [
+            "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "861a3116-7f75-4b7c-b1a1-5efd4936589c",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "861a3116-7f75-4b7c-b1a1-5efd4936589c",
+          "full_name" : "Mary Wiseman",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+            }
+          ],
+          "film_ids" : [
+            "c9e1f6f0-4f1e-4a76-92ee-76c1942faa97"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "7dd18bd5-6748-4f6d-8919-c4eb5d660632",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "7dd18bd5-6748-4f6d-8919-c4eb5d660632",
+          "full_name" : "Robert Wise",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "4cfc6519-7e07-4419-9db3-127b0166331a"
+            },
+            {
+              "role" : "director",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            }
+          ],
+          "film_ids" : [
+            "4cfc6519-7e07-4419-9db3-127b0166331a",
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "207c28f1-2d25-4f6c-b3d2-1ba2a18c51de",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "207c28f1-2d25-4f6c-b3d2-1ba2a18c51de",
+          "full_name" : "Harold Livingston",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            }
+          ],
+          "film_ids" : [
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "317ba074-e7bf-4c7a-a6e3-da71b1e7cbf2",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "317ba074-e7bf-4c7a-a6e3-da71b1e7cbf2",
+          "full_name" : "Alan Dean Foster",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+            }
+          ],
+          "film_ids" : [
+            "a7b11817-205f-4e1a-98b5-e3c48b824bc3"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "74b4cc18-9fb3-4796-b718-2d0fa4f84fb4",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "74b4cc18-9fb3-4796-b718-2d0fa4f84fb4",
+          "full_name" : "Steve Meerson",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            }
+          ],
+          "film_ids" : [
+            "1b7d7c64-8be8-47db-8924-23029a9878a9"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "7caea3e2-194c-4876-be8f-60b1a4743d21",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "7caea3e2-194c-4876-be8f-60b1a4743d21",
+          "full_name" : "Peter Krikes",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "1b7d7c64-8be8-47db-8924-23029a9878a9"
+            }
+          ],
+          "film_ids" : [
+            "1b7d7c64-8be8-47db-8924-23029a9878a9"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "09ea7635-dfee-4722-ad40-23c93ef03644",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "09ea7635-dfee-4722-ad40-23c93ef03644",
+          "full_name" : "David Carson",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+            }
+          ],
+          "film_ids" : [
+            "98167b6e-8d41-4378-9fc3-ee998677e6cb"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "a37e91d0-3c82-43f3-8517-68699ee134d6",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "a37e91d0-3c82-43f3-8517-68699ee134d6",
+          "full_name" : "Stuart Baird",
+          "role" : [
+            {
+              "role" : "director",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            }
+          ],
+          "film_ids" : [
+            "50d842be-bcda-401e-90de-b06929611ce0"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "1f6ad693-a134-44f1-a0a6-71e4c0dec31a",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "1f6ad693-a134-44f1-a0a6-71e4c0dec31a",
+          "full_name" : "John Logan",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "50d842be-bcda-401e-90de-b06929611ce0"
+            }
+          ],
+          "film_ids" : [
+            "50d842be-bcda-401e-90de-b06929611ce0"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "a76a7d73-4c57-49b8-a7e8-1c5c1e3452fb",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "a76a7d73-4c57-49b8-a7e8-1c5c1e3452fb",
+          "full_name" : "Nichelle Nichols",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "2330ec4f-d7f0-4f5a-b5ae-5d6d88aff0d4"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "9e1ec2e3-336e-4b9f-a6e0-f93c2ea9ee6d"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d2d9b15d-a134-446a-af51-eb8c5207fd46"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "d94787ee-8cf4-45a3-88a3-0be4a21becbe"
+            }
+          ],
+          "film_ids" : [
+            "2330ec4f-d7f0-4f5a-b5ae-5d6d88aff0d4",
+            "2bfc0f50-7a88-4d4c-bbf8-f839c6150e7e",
+            "9e1ec2e3-336e-4b9f-a6e0-f93c2ea9ee6d",
+            "d2d9b15d-a134-446a-af51-eb8c5207fd46",
+            "d94787ee-8cf4-45a3-88a3-0be4a21becbe"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "d67afc96-b9ed-4c91-9507-ffc2018c58d7",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "d67afc96-b9ed-4c91-9507-ffc2018c58d7",
+          "full_name" : "Michael Piller",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "e79b49dc-a5d9-46ec-a2c6-4cead985d732"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "9d284e83-21f0-4073-aac0-4abee51193d8"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "a144d250-6667-47e4-94bd-0ee59c0dc05f"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "de5347cf-a70d-430f-8005-786326e28794"
+            },
+            {
+              "role" : "writer",
+              "uuid" : "e79b49dc-a5d9-46ec-a2c6-4cead985d732"
+            }
+          ],
+          "film_ids" : [
+            "9d284e83-21f0-4073-aac0-4abee51193d8",
+            "a144d250-6667-47e4-94bd-0ee59c0dc05f",
+            "de5347cf-a70d-430f-8005-786326e28794",
+            "e79b49dc-a5d9-46ec-a2c6-4cead985d732"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "59674337-e77d-422b-967c-aa01017af7c3",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "59674337-e77d-422b-967c-aa01017af7c3",
+          "full_name" : "Lawrence Konner",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            }
+          ],
+          "film_ids" : [
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "b5fa51d6-4753-4b64-819c-2de16af5c057",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "b5fa51d6-4753-4b64-819c-2de16af5c057",
+          "full_name" : "Mark Rosenthal",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            }
+          ],
+          "film_ids" : [
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "1749841f-0569-49bb-96ce-3f9dd51b42e2",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "1749841f-0569-49bb-96ce-3f9dd51b42e2",
+          "full_name" : "Denny Martin Flinn",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+            }
+          ],
+          "film_ids" : [
+            "511b8ae8-f59d-450e-b9a2-22aabba2693b"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "e3a8bf89-10a9-404a-8cd8-ea249c0a654e",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "e3a8bf89-10a9-404a-8cd8-ea249c0a654e",
+          "full_name" : "Jeri Taylor",
+          "role" : [
+            {
+              "role" : "writer",
+              "uuid" : "de5347cf-a70d-430f-8005-786326e28794"
+            }
+          ],
+          "film_ids" : [
+            "de5347cf-a70d-430f-8005-786326e28794"
+          ]
+        }
+      },
+      {
+        "_index" : "persons",
+        "_type" : "_doc",
+        "_id" : "7f100195-5faf-4746-8a2b-df2a3e57cc8b",
+        "_score" : 1.0,
+        "_source" : {
+          "uuid" : "7f100195-5faf-4746-8a2b-df2a3e57cc8b",
+          "full_name" : "Kate Mulgrew",
+          "role" : [
+            {
+              "role" : "actor",
+              "uuid" : "15afdc8b-381f-4bcb-9530-59113d10b5cb"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "de5347cf-a70d-430f-8005-786326e28794"
+            },
+            {
+              "role" : "actor",
+              "uuid" : "eda3be8d-d0bd-4cf6-84ed-7bf80c371605"
+            }
+          ],
+          "film_ids" : [
+            "15afdc8b-381f-4bcb-9530-59113d10b5cb",
+            "de5347cf-a70d-430f-8005-786326e28794",
+            "eda3be8d-d0bd-4cf6-84ed-7bf80c371605"
+          ]
+        }
+      }
+    ]
