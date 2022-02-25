@@ -23,8 +23,12 @@ app = FastAPI(
 )
 
 
+def on_fail_connection(e):
+    print(f" ==== Connection error: {e}")
+
+
 @app.on_event('startup')
-@backoff.on_exception(backoff.expo, (ValueError, gaierror), max_time=25)
+@backoff.on_exception(backoff.expo, (ValueError, gaierror), max_time=25, on_giveup=on_fail_connection)
 async def startup():
     # Подключаемся к базам при старте сервера
     # Подключиться можем при работающем event-loop
