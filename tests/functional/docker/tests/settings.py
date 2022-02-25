@@ -21,5 +21,4 @@ class TestSettings(BaseSettings):
     api_version: int = Field(os.getenv('API_VERSION'))
 
 
-
 test_settings = TestSettings()

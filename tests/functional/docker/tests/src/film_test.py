@@ -1,37 +1,37 @@
+import asyncio
 import pytest
+from http import HTTPStatus
+
+pytestmark = pytest.mark.asyncio
 
 
-@pytest.mark.asyncio
 async def test_get_films_data_default(make_get_request):
     response = await make_get_request('film/')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 50
     assert response.body[0]['imdb_rating'] == 9.6
     assert response.body[49]['title'] == 'Wishes on a Falling Star'
 
 
-@pytest.mark.asyncio
 async def test_get_all_films_data(make_get_request):
     response = await make_get_request('film/?page[size]=1000')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 999
     assert response.body[0]['imdb_rating'] == 9.6
     assert response.body[998]['imdb_rating'] == None
 
 
-@pytest.mark.asyncio
 async def test_get_films_data_by_filter_comedy_and_sort_asc(make_get_request):
     response = await make_get_request('film/?sort=imdb_rating&filter[genre]=comedy')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 50
     assert response.body[0]['imdb_rating'] == 1.8
     assert response.body[49]['title'] == 'Pick a Star'
 
 
-@pytest.mark.asyncio
 async def test_get_film_data_by_id_1(make_get_request):
     response = await make_get_request('film/2a090dde-f688-46fe-a9f4-b781a985275e')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 8
     assert response.body['uuid'] == '2a090dde-f688-46fe-a9f4-b781a985275e'
     assert response.body['title'] == 'Star Wars: Knights of the Old Republic'
@@ -54,10 +54,9 @@ async def test_get_film_data_by_id_1(make_get_request):
     assert response.body['directors'][0]['full_name'] == "Casey Hudson"
 
 
-@pytest.mark.asyncio
 async def test_get_film_data_by_id_2_null_imdb_rating(make_get_request):
     response = await make_get_request('film/e7e6d147-cc10-406c-a7a2-5e0be2231327')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 8
     assert response.body['uuid'] == 'e7e6d147-cc10-406c-a7a2-5e0be2231327'
     assert response.body['title'] == 'Shooting Star'
@@ -86,10 +85,9 @@ async def test_get_film_data_by_id_2_null_imdb_rating(make_get_request):
     assert response.body['directors'][0]['full_name'] == "Lyubo Yonchev"
 
 
-@pytest.mark.asyncio
 async def test_get_film_data_by_id_3_null_actors_writers_directors(make_get_request):
     response = await make_get_request('film/fd78a0e5-d4ec-435e-8994-4ccbdfc4e60b')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 8
     assert response.body['uuid'] == 'fd78a0e5-d4ec-435e-8994-4ccbdfc4e60b'
     assert response.body['title'] == 'Lone Star Restoration'
@@ -103,9 +101,8 @@ async def test_get_film_data_by_id_3_null_actors_writers_directors(make_get_requ
     assert response.body['directors'] == None
 
 
-@pytest.mark.asyncio
 async def test_get_film_data_by_unknown_id(make_get_request):
     response = await make_get_request('film/ead9b449-734b-4878-86f1-1e4c96a28bba')
-    assert response.status == 404
+    assert response.status == HTTPStatus.NOT_FOUND
     assert len(response.body) == 1
     assert response.body['detail'] == 'Film not found'

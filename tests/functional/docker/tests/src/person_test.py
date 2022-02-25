@@ -1,10 +1,13 @@
+import asyncio
 import pytest
+from http import HTTPStatus
+
+pytestmark = pytest.mark.asyncio
 
 
-@pytest.mark.asyncio
 async def test_get_person_data_by_id(make_get_request):
     response = await make_get_request('person/a5a8f573-3cee-4ccc-8a2b-91cb9f55250a')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 4
     assert response.body['uuid'] == 'a5a8f573-3cee-4ccc-8a2b-91cb9f55250a'
     assert response.body['full_name'] == 'George Lucas'
@@ -20,10 +23,9 @@ async def test_get_person_data_by_id(make_get_request):
     assert len(response.body['film_ids']) == 46
 
 
-@pytest.mark.asyncio
 async def test_get_person_films_data_by_id(make_get_request):
     response = await make_get_request('person/26e83050-29ef-4163-a99d-b546cac208f8/film')
-    assert response.status == 200
+    assert response.status == HTTPStatus.OK
     assert len(response.body) == 14
     assert response.body[0] == {
         "uuid": "3d825f60-9fff-4dfe-b294-1a45fa1e115d",
@@ -37,10 +39,9 @@ async def test_get_person_films_data_by_id(make_get_request):
     }
 
 
-@pytest.mark.asyncio
 async def test_get_person_data_by_unknown_id(make_get_request):
     response = await make_get_request('person/a5a8f573-3cee-4ccc-8a2b-91cb9aaaaaaa')
-    assert response.status == 404
+    assert response.status == HTTPStatus.NOT_FOUND
     assert len(response.body) == 1
     assert response.body['detail'] == 'Person not found'
 
