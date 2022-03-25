@@ -19,3 +19,6 @@ ELASTIC_PORT = int(os.getenv('ELASTIC_PORT', 9200))
 
 # Корень проекта
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Сервис авторизации
+AUTH_URL = os.getenv("AUTH_URL", "127.0.0.1:5000")
