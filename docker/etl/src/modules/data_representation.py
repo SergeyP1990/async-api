@@ -55,6 +55,7 @@ class FilmWork:
     writers: List = field(default_factory=list)
     directors: List = field(default_factory=list)
     updated_at: datetime.datetime = field(default=None)
+    subscribe_required: bool = field(default=False)
 
     def elastic_format(self) -> dict:
         di = {}

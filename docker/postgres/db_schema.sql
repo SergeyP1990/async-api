@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS content.film_work (
     file_path TEXT,
     rating FLOAT,
     type TEXT NOT NULL,
+    subscribe_required BOOLEAN,
     created_at timestamptz,
     updated_at timestamptz
 );
