@@ -50,7 +50,7 @@ async def film_details(film_id: str,
 
     if film.subscribe_required:
         data = {'film_title': film.title}
-        resp = requests.get(f'{AUTH_URL}/role/user/role_check',
+        resp = requests.get(f'{AUTH_URL}/user/role_check',
                             body=data)
         if resp.status_code == HTTPStatus.OK:
             return film_done
